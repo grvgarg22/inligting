@@ -3,6 +3,11 @@
 //-------------------- Variables 
 $title: 'Montserrat', sans-serif;
 $accent: rgba(255, 144, 0, 0.92);
+$breakpoint-laptop: 1260px;
+$breakpoint-tablet-xl: 960px;
+$breakpoint-tablet-sm: 768px;
+$breakpoint-phone-xl: 480px;
+$breakpoint-phone-sm: 320px;
 
 //--------------------- Misc. 
 body {font-family: $title;}
@@ -667,4 +672,27 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 	.frame-title {font-family:$title; font-weight:600; padding: 0; margin: 2rem 0; text-align: left; line-height: 0; border-bottom: 2px solid $accent;
 		span {text-transform: uppercase; padding: 5px 15px 5px 0; font-size: 1.2rem; background-color: #fff; color: #333; letter-spacing: 2px;}
 	}
+}
+
+
+/*********************** MEDIA QUERIES ***********************/
+
+@media only screen and (max-width: $breakpoint-laptop) {
+
+}
+
+@media only screen and (max-width: $breakpoint-tablet-xl) {
+
+}
+
+@media only screen and (max-width: $breakpoint-tablet-sm) {
+
+}
+
+@media only screen and (max-width: $breakpoint-phone-xl) {
+
+}
+
+@media only screen and (max-width: $breakpoint-phone-sm) {
+
 }
