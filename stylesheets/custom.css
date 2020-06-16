@@ -328,9 +328,9 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 .container.video-page .frame_2 .card:hover .video-play-icon { background-color: #ff0000; }
 
 /******************** Contact Us *****************/
-.contact-pg { margin: 8rem 6rem 4rem 6rem; position: relative; }
-.contact-pg .bg-img-top { position: absolute; z-index: -1; top: -70px; left: -100px; max-width: 70%; }
-.contact-pg .bg-img-bottom { position: absolute; z-index: -1; bottom: -100px; right: -100px; max-width: 70%; }
+.contact-pg { margin-top: 8rem; position: relative; }
+.contact-pg .bg-img-top { position: absolute; z-index: -1; top: -10rem; right: 0; max-width: 70%; }
+.contact-pg .bg-img-bottom { position: absolute; z-index: -1; bottom: 14rem; right: 0; max-width: 70%; }
 .contact-pg h1, .contact-pg h2 { text-align: center; font-family: "Montserrat", sans-serif; letter-spacing: 0px; font-size: 2rem; margin-bottom: 3rem; text-transform: uppercase; }
 .contact-pg h1:after, .contact-pg h2:after { content: ""; display: block; width: 44px; height: 4px; background: rgba(255, 144, 0, 0.92); margin: 1rem auto 0; border-radius: 2px; }
 .contact-pg p { text-align: center; font-weight: 500; font-size: 1.5rem; padding: 2rem; color: #777; }
@@ -357,9 +357,9 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 .contact-pg .panel .social a:last-child { background-color: #26a6d1; }
 
 /***************** About Us *********************/
-.about-pg { margin: 8rem 6rem 4rem 6rem; position: relative; }
-.about-pg .bg-img-top { position: absolute; z-index: -1; top: -70px; left: -100px; max-width: 70%; }
-.about-pg .bg-img-bottom { position: absolute; z-index: -1; bottom: -100px; right: -100px; max-width: 70%; }
+.about-pg { margin-top: 8rem; position: relative; }
+.about-pg .bg-img-top { position: absolute; z-index: -1; top: -10rem; right: 0; max-width: 70%; }
+.about-pg .bg-img-bottom { position: absolute; z-index: -1; bottom: 14rem; right: 0; max-width: 70%; }
 .about-pg .intro { margin: 5rem 0; text-align: left; }
 .about-pg .intro h1, .about-pg .intro h2 { text-align: center; font-family: "Montserrat", sans-serif; letter-spacing: 0px; font-size: 2.5rem; margin-bottom: 3rem; text-transform: uppercase; }
 .about-pg .intro h1 a, .about-pg .intro h2 a { color: #333; }
