@@ -134,10 +134,12 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 			span {text-transform: uppercase; padding: 5px 15px 5px 0; font-size: 1.2rem; background-color: #f1f1f1; color: #333; letter-spacing: 2px;}
 		}
 		.card {margin-bottom: 1rem; border:none; border:1px solid $accent; -webkit-transition: all 600ms; -moz-transition: all 600ms; transition: all 600ms;
-			.card-img-top {position: relative; border-radius:0; padding: 1rem 0; width: 66%; margin: 0 auto;}
+			a {text-align: center;
+				.card-img-top {position: relative; border-radius:0; padding: 1rem 0; width: 66%; margin: 0 auto;}
+			}
 			.card-body {background-color: $accent; padding: 5px; -webkit-transition: all 600ms; -moz-transition: all 600ms; transition: all 600ms;
 				.card-title {margin: 0; font-size: 14px; text-align: center; font-family: $title; font-weight:600;
-					a {color: #fff; text-align: center;}
+					a {color: #fff;}
 				}
 			}
 		}
