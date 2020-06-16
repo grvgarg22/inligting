@@ -585,10 +585,11 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 		}
 	}
 	.message {
+		.form-group {margin-bottom: 0;}
 		::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */color: #999; opacity: 1; /* Firefox */}            
 		:-ms-input-placeholder { /* Internet Explorer 10-11 */color: #999;}            
 		::-ms-input-placeholder { /* Microsoft Edge */color: #999;}
-		input, textarea {border: 1px solid #f3551c; border-bottom: 3px solid $accent; border-radius: 1rem; padding: 1rem;}
+		input, textarea {margin-bottom: 1rem; border: 1px solid #f3551c; border-bottom: 3px solid $accent; border-radius: 1rem; padding: 1rem;}
 		button {font-family: $title; letter-spacing: 1px; background: $accent; border-radius: 1rem; color: #fff; border: none;}
 		button:hover, button:focus, button:active {color: #fff; background: #f03422;}
 	}

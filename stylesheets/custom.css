@@ -340,10 +340,11 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 .contact-pg .contact-info ul li img { width: 1.5rem; float: left; margin: 0rem 2rem; }
 .contact-pg .contact-info ul li p { text-align: left; float: left; }
 .contact-pg .contact-info ul li strong { margin-right: 1rem; }
+.contact-pg .message .form-group { margin-bottom: 0; }
 .contact-pg .message ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */ color: #999; opacity: 1; /* Firefox */ }
 .contact-pg .message :-ms-input-placeholder { /* Internet Explorer 10-11 */ color: #999; }
 .contact-pg .message ::-ms-input-placeholder { /* Microsoft Edge */ color: #999; }
-.contact-pg .message input, .contact-pg .message textarea { border: 1px solid #f3551c; border-bottom: 3px solid rgba(255, 144, 0, 0.92); border-radius: 1rem; padding: 1rem; }
+.contact-pg .message input, .contact-pg .message textarea { margin-bottom: 1rem; border: 1px solid #f3551c; border-bottom: 3px solid rgba(255, 144, 0, 0.92); border-radius: 1rem; padding: 1rem; }
 .contact-pg .message button { font-family: "Montserrat", sans-serif; letter-spacing: 1px; background: rgba(255, 144, 0, 0.92); border-radius: 1rem; color: #fff; border: none; }
 .contact-pg .message button:hover, .contact-pg .message button:focus, .contact-pg .message button:active { color: #fff; background: #f03422; }
 .contact-pg .panel { margin: 3rem; }
