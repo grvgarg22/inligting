@@ -353,7 +353,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 .contact-pg .panel .panel-title span { text-transform: uppercase; padding: 5px 10px 5px 10px; font-size: 1.1rem; background-color: #fff; color: #333; letter-spacing: 1px; }
 .contact-pg .panel p { padding: 0; }
 .contact-pg .panel .social { margin-top: 1rem; text-align: center; }
-.contact-pg .panel .social a { display: inline-block; padding: 0 3rem; border-radius: 2rem; margin-right: 10px; }
+.contact-pg .panel .social a { display: inline-block; padding: 0 2rem; border-radius: 2rem; margin-right: 10px; }
 .contact-pg .panel .social a img { width: 2.5rem; }
 .contact-pg .panel .social a:first-child { background-color: #3b5998; }
 .contact-pg .panel .social a:last-child { background-color: #26a6d1; }
