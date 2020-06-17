@@ -399,6 +399,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .footer img { width: 12rem; margin: 1rem; }
   .footer .page-list { padding: 11px; }
   .footer .footer-story-links { padding: 1.2rem; }
+  .card.advt-card { width: 100% !important; clear: both; }
   .home_pg .frame_1 .frame_1a .card:first-child { margin-top: 0; }
   .home_pg .frame_1 .frame_1a .card { width: 48%; }
   .home_pg .frame_1b .card { margin: 5px; }
@@ -408,13 +409,14 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .home_pg .frame_3 .card { width: 47%; float: left; margin: 10px; }
   .home_pg .frame_3 .card.main_vid { width: 97%; }
   .home_pg .frame_3 .card.card.main_vid .video-play-icon { top: 40%; }
-  .cat-page .frame_2 .frame_2b .frame-title span, .cat-page .latest-mobile .frame-title span, .container.article-page .frame_2a .frame-title span, .container.article-page .frame_1 .frame-title span, .specs-page .frame_2 .frame_2a .frame-title span { font-size: 1.5rem; }
-  .cat-page .frame_2 .frame_2b .card, .container.article-page .frame_2a .card, .specs-page .frame_2 .frame_2a .card { width: 47%; margin: 10px; float: left; }
-  .cat-page .frame_2 .frame_2b .card .card-body, .container.article-page .frame_2a .card .card-body, .specs-page .frame_2 .frame_2a .card .card-body { padding: 8px; }
-  .cat-page .frame_2 .frame_2b .card .card-body .card-title, .container.article-page .frame_2a .card .card-body .card-title, .container.article-page .frame_1 .card .card-body .card-title, .specs-page .frame_2 .frame_2a .card .card-body h3 { font-size: 1rem; }
+  .cat-page .frame_2 .frame_2b .frame-title span, .cat-page .latest-mobile .frame-title span, .container.article-page .frame_2a .frame-title span, .container.article-page .frame_1 .frame-title span, .specs-page .frame_2 .frame_2a .frame-title span, .container.recipe-page .frame_2a .frame-title span { font-size: 1.5rem; }
+  .cat-page .frame_2 .frame_2b .card, .container.article-page .frame_2a .card, .specs-page .frame_2 .frame_2a .card, .container.recipe-page .frame_2a .card { width: 47%; margin: 10px; float: left; }
+  .cat-page .frame_2 .frame_2b .card .card-body, .container.article-page .frame_2a .card .card-body, .specs-page .frame_2 .frame_2a .card .card-body .container.recipe-page .frame_2a .card .card-body { padding: 8px; }
+  .cat-page .frame_2 .frame_2b .card .card-body .card-title, .container.article-page .frame_2a .card .card-body .card-title, .container.article-page .frame_1 .card .card-body .card-title, .specs-page .frame_2 .frame_2a .card .card-body .card-title, .container.recipe-page .frame_2a .card .card-body .card-title { font-size: 1rem; }
   .story-first-published { margin: 1rem 0; }
   .specs-page .frame_2 .specs_table .table_heading h2, .specs-page .frame_2 .about-phone .panel-heading .panel-title { line-height: 1.4; } }
 @media only screen and (max-width: 560px) { .container { width: 97%; padding: 10px; }
+  .story-first-published { margin: 1rem 0; }
   .footer img { width: 92%; margin: 1rem; padding: 0.5rem 7.5rem; border-bottom: 2px solid #f2581a; }
   .footer .page-list { box-shadow: inset 1px 1px 6px #ccc; }
   .footer .page-list li { margin: 10px; }
@@ -435,7 +437,9 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .specs-page .frame_1 .card { padding: 1rem; border: 1px solid #ff9000; }
   .specs-page .frame_1 .card .card-img-top { width: 20%; margin: 0 auto; }
   .specs-page .frame_1 .cat-heading .panel-title { font-size: 1.3rem; margin-top: 2rem; }
-  .story-first-published { margin: 1rem 0; }
-  .specs-page .frame_2 .specs_table .table_heading h2, .specs-page .frame_2 .about-phone .panel-heading .panel-title { line-height: 1.4; } }
+  .specs-page .frame_2 .specs_table .table_heading h2, .specs-page .frame_2 .about-phone .panel-heading .panel-title { line-height: 1.4; }
+  .container.recipe-page .recipe-container .recipe-header .publish-details { margin-bottom: 0; }
+  .container.recipe-page .recipe-container .recipe-header .social { float: left; }
+  .container.recipe-page .recipe-container .recipe-body .recipe-summary span, .container.recipe-page .recipe-container .recipe-body .recipe-details p span, .container.recipe-page .recipe-container .recipe-body .ingredients h2, .container.recipe-page .recipe-container .recipe-body .recipe-method h2 { letter-spacing: 2px; } }
 
 /*# sourceMappingURL=custom.css.map */
