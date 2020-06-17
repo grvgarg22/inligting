@@ -407,7 +407,8 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .home_pg .frame_1c .card { margin: 10px; width: 47%; float: left; }
   .home_pg .frame_3 .card { width: 47%; float: left; margin: 10px; }
   .home_pg .frame_3 .card.main_vid { width: 97%; }
-  .home_pg .frame_3 .card.card.main_vid .video-play-icon { top: 40%; } }
+  .home_pg .frame_3 .card.card.main_vid .video-play-icon { top: 40%; }
+  .cat-page .frame_2 .frame_2b .card { width: 47%; margin: 10px; float: left; } }
 @media only screen and (max-width: 560px) { .container { width: 100%; padding: 10px; }
   .footer img { width: 92%; margin: 1rem; padding: 0.5rem 7.5rem; border-bottom: 2px solid #f2581a; }
   .footer .page-list { box-shadow: inset 1px 1px 6px #ccc; }
