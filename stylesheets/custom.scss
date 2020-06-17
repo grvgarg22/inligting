@@ -686,6 +686,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 }
 
 @media only screen and (min-width:551px) and (max-width: $breakpoint-tablet-sm) {
+	.container {width: 98%; padding: 10px;}
 	.footer img {width: 12rem; margin: 1rem;}
 	.footer .page-list {padding: 11px;}
 	.footer .footer-story-links {padding: 1.2rem;}
@@ -702,6 +703,8 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 }
 
 @media only screen and (max-width: $breakpoint-phone-xl) {
+	.container {width: 100%; padding: 10px;}
+
 	.footer img {width: 92%; margin: 1rem; padding: 0.5rem 7.5rem; border-bottom: 2px solid #f2581a;}
 	.footer .page-list {box-shadow: inset 1px 1px 6px #ccc;}
 	.footer .page-list li {margin: 10px;}
