@@ -5,7 +5,7 @@ $title: 'Montserrat', sans-serif;
 $accent: rgba(255, 144, 0, 0.92);
 $breakpoint-laptop: 1260px;
 $breakpoint-tablet-xl: 960px;
-$breakpoint-tablet-sm: 768px;
+$breakpoint-tablet-sm: 876px;
 $breakpoint-phone-xl: 560px;
 $breakpoint-phone-sm: 320px;
 
@@ -685,7 +685,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 
 }
 
-@media only screen and (min-width:561px) and (max-width: $breakpoint-tablet-sm) {
+@media only screen and (min-width:551px) and (max-width: $breakpoint-tablet-sm) {
 	.footer img {width: 12rem; margin: 1rem;}
 	.footer .page-list {padding: 12px;}
 	.footer .footer-story-links {padding: 1rem;}
