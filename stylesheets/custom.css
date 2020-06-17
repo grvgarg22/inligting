@@ -395,7 +395,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 .page-not-found-404 .frame-title span { text-transform: uppercase; padding: 5px 15px 5px 0; font-size: 1.2rem; background-color: #fff; color: #333; letter-spacing: 2px; }
 
 /*********************** MEDIA QUERIES ***********************/
-@media only screen and (min-width: 551px) and (max-width: 876px) { .footer img { width: 12rem; margin: 1rem; }
+@media only screen and (min-width: 551px) and (max-width: 970px) { .footer img { width: 12rem; margin: 1rem; }
   .footer .page-list { padding: 12px; }
   .footer .footer-story-links { padding: 1rem; }
   .home_pg .frame_1 .frame_1a .card:first-child { margin-top: 0; }
