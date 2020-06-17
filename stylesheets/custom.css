@@ -342,6 +342,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 .contact-pg .contact-info ul li p { text-align: left; float: left; }
 .contact-pg .contact-info ul li strong { margin-right: 1rem; }
 .contact-pg .message .form-group { margin-bottom: 0; }
+.contact-pg .message .form-control:focus, .contact-pg .message .form-control:hover { box-shadow: 0 0 0 0.2rem rgba(243, 81, 29, 0.2); }
 .contact-pg .message ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */ color: #999; opacity: 1; /* Firefox */ }
 .contact-pg .message :-ms-input-placeholder { /* Internet Explorer 10-11 */ color: #999; }
 .contact-pg .message ::-ms-input-placeholder { /* Microsoft Edge */ color: #999; }
@@ -400,7 +401,10 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 /*********************** MEDIA QUERIES ***********************/
 @media only screen and (min-width: 1021px) and (max-width: 1260px) { .container.video-page .frame_1 .video-container .video-header .social a img { margin: 1rem 0.3rem; }
   .cat-page .frame_2 .frame_2a .card .card-body { padding: 5px 8px; }
-  .cat-page .frame_2 .frame_2a .card .card-body .card-title, .cat-page .frame_2 .frame_2a .card .card-body p { font-size: 14px; } }
+  .cat-page .frame_2 .frame_2a .card .card-body .card-title, .cat-page .frame_2 .frame_2a .card .card-body p { font-size: 14px; }
+  .about-pg .our-team .row .card:hover .card-body { padding: 1rem; }
+  .about-pg .our-team .row .card .card-body .social a img { margin: 0 0.5rem; }
+  .contact-pg .panel { margin: 3rem 1rem; } }
 @media only screen and (min-width: 551px) and (max-width: 1020px) { .container { max-width: 98%; padding: 10px; }
   .footer img { width: 12rem; margin: 1rem; }
   .footer .page-list { padding: 11px; }
@@ -422,7 +426,12 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .recipe-page .frame_1 { margin-top: 2rem; }
   .container.video-page .frame_1 .video-sidebar { margin-bottom: 1rem; margin-top: 2rem; }
   .container.video-page .frame_1 .video-sidebar .card .video-play-icon { top: 27%; }
-  .container.video-page .frame_2 .frame-title { text-align: center; } }
+  .container.video-page .frame_2 .frame-title { text-align: center; }
+  .page-not-found-404 .frame-404 h1 { font-size: 2rem; }
+  .contact-pg h1, .contact-pg h2 { font-size: 1.5rem; letter-spacing: 2px; font-weight: 600; margin-bottom: 1rem; }
+  .contact-pg p { font-size: 1.1rem; padding: 1rem; }
+  .contact-pg .message { padding: 0.5rem; }
+  .contact-pg .panel { margin: 3rem 1rem; } }
 @media only screen and (max-width: 560px) { .container { width: 97%; padding: 10px; }
   .story-first-published { margin: 1rem 0; }
   .footer img { width: 92%; margin: 1rem; padding: 0.5rem 7.5rem; border-bottom: 2px solid #f2581a; }
@@ -457,6 +466,15 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .container.video-page .frame_1 .video-container .video-header .social a img { margin: 0.5rem; }
   .container.video-page .frame_1 .video-container .video-header .video-exrpt { clear: both; margin-top: 3rem; }
   .container.video-page .frame_1 .video-sidebar { margin-top: 2rem; margin-bottom: 1rem; }
-  .search-page .cat-heading .panel-title { margin-bottom: 1rem; font-size: 1.5rem; } }
+  .search-page .cat-heading .panel-title { margin-bottom: 1rem; font-size: 1.5rem; }
+  .page-not-found-404 .frame-404 h1 { top: 0; left: 0; font-size: 1.5rem; }
+  .about-pg .bg-img-top, .contact-pg .bg-img-top { top: 0; max-width: 100%; }
+  .about-pg .intro h1, .about-pg .intro h2, .about-pg .our-team h2, .contact-pg h1, .contact-pg h2 { font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600; }
+  .about-pg .intro p { font-size: 1rem; }
+  .about-pg .intro { margin: 3rem 0; }
+  .about-pg .our-team .row .card { margin: 1rem 0.5rem; }
+  .contact-pg p { font-size: 1.2rem; }
+  .contact-pg .message { padding: 0.5rem; }
+  .contact-pg .panel { margin: 3rem 1rem; } }
 
 /*# sourceMappingURL=custom.css.map */
