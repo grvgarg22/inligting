@@ -686,7 +686,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 }
 
 @media only screen and (min-width:551px) and (max-width: $breakpoint-tablet-sm) {
-	.container {width: 98%; padding: 10px;}
+	.container {width: 98% !important; padding: 10px;}
 	.footer img {width: 12rem; margin: 1rem;}
 	.footer .page-list {padding: 11px;}
 	.footer .footer-story-links {padding: 1.2rem;}
