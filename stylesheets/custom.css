@@ -387,6 +387,9 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 .about-pg .our-team .row .card:hover .card-body { height: 100%; padding: 3rem 2rem; transform: translate3d(0, 0, 0); -webkit-transition: all 600ms; -moz-transition: all 600ms; transition: all 600ms; }
 .about-pg .our-team .row .card:hover .card-body p { display: block; margin-bottom: 0; }
 
+/********************* Search Page ********************/
+.search-page .frame_2 { margin-top: 0; }
+
 /******************** 404 page ********************/
 .page-not-found-404 .frame-404 { margin-bottom: 4rem; position: relative; }
 .page-not-found-404 .frame-404 .img-404 { width: 100%; }
@@ -395,6 +398,9 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 .page-not-found-404 .frame-title span { text-transform: uppercase; padding: 5px 15px 5px 0; font-size: 1.2rem; background-color: #fff; color: #333; letter-spacing: 2px; }
 
 /*********************** MEDIA QUERIES ***********************/
+@media only screen and (min-width: 1021px) and (max-width: 1260px) { .container.video-page .frame_1 .video-container .video-header .social a img { margin: 1rem 0.3rem; }
+  .cat-page .frame_2 .frame_2a .card .card-body { padding: 5px 8px; }
+  .cat-page .frame_2 .frame_2a .card .card-body .card-title, .cat-page .frame_2 .frame_2a .card .card-body p { font-size: 14px; } }
 @media only screen and (min-width: 551px) and (max-width: 1020px) { .container { max-width: 98%; padding: 10px; }
   .footer img { width: 12rem; margin: 1rem; }
   .footer .page-list { padding: 11px; }
@@ -405,17 +411,18 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .home_pg .frame_1b .card { margin: 5px; }
   .home_pg .frame_1b .card .card-body .card-title { font-size: 14px; }
   .home_pg .frame_1c { margin-top: 0.5rem; }
-  .home_pg .frame_1c .card { margin: 10px; width: 47%; float: left; }
-  .home_pg .frame_3 .card { width: 47%; float: left; margin: 10px; }
   .home_pg .frame_3 .card.main_vid { width: 97%; }
   .home_pg .frame_3 .card.card.main_vid .video-play-icon { top: 40%; }
-  .cat-page .frame_2 .frame_2b .frame-title span, .cat-page .latest-mobile .frame-title span, .container.article-page .frame_2a .frame-title span, .container.article-page .frame_1 .frame-title span, .specs-page .frame_2 .frame_2a .frame-title span, .container.recipe-page .frame_1 .frame-title span, .container.recipe-page .frame_2a .frame-title span { font-size: 1.5rem; }
-  .cat-page .frame_2 .frame_2b .card, .container.article-page .frame_2a .card, .specs-page .frame_2 .frame_2a .card, .container.recipe-page .frame_2a .card { width: 47%; margin: 10px; float: left; }
+  .cat-page .frame_2 .frame_2b .frame-title span, .cat-page .latest-mobile .frame-title span, .container.article-page .frame_2a .frame-title span, .container.article-page .frame_1 .frame-title span, .specs-page .frame_2 .frame_2a .frame-title span, .container.recipe-page .frame_1 .frame-title span, .container.recipe-page .frame_2a .frame-title span, .container.video-page .frame_1 .video-sidebar .frame-title span, .container.video-page .frame_2 .frame-title span { font-size: 1.5rem; padding: 5px 10px; }
+  .home_pg .frame_1c .card, .home_pg .frame_3 .card, .cat-page .frame_2 .frame_2b .card, .container.article-page .frame_2a .card, .specs-page .frame_2 .frame_2a .card, .container.recipe-page .frame_2a .card, .container.video-page .frame_1 .video-sidebar .card { width: 47%; margin: 10px; float: left; }
   .cat-page .frame_2 .frame_2b .card .card-body, .container.article-page .frame_2a .card .card-body, .specs-page .frame_2 .frame_2a .card .card-body .container.recipe-page .frame_2a .card .card-body { padding: 8px; }
   .cat-page .frame_2 .frame_2b .card .card-body .card-title, .container.article-page .frame_2a .card .card-body .card-title, .container.article-page .frame_1 .card .card-body .card-title, .specs-page .frame_2 .frame_2a .card .card-body .card-title, .container.recipe-page .frame_2a .card .card-body .card-title { font-size: 1rem; }
   .story-first-published { margin: 1rem 0; }
   .specs-page .frame_2 .specs_table .table_heading h2, .specs-page .frame_2 .about-phone .panel-heading .panel-title { line-height: 1.4; }
-  .recipe-page .frame_1 { margin-top: 2rem; } }
+  .recipe-page .frame_1 { margin-top: 2rem; }
+  .container.video-page .frame_1 .video-sidebar { margin-bottom: 1rem; margin-top: 2rem; }
+  .container.video-page .frame_1 .video-sidebar .card .video-play-icon { top: 27%; }
+  .container.video-page .frame_2 .frame-title { text-align: center; } }
 @media only screen and (max-width: 560px) { .container { width: 97%; padding: 10px; }
   .story-first-published { margin: 1rem 0; }
   .footer img { width: 92%; margin: 1rem; padding: 0.5rem 7.5rem; border-bottom: 2px solid #f2581a; }
@@ -431,8 +438,11 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .home_pg .frame_3 .col-lg-6 .video-play-icon { width: 3rem; padding: 10px 15px; }
   .home_pg .frame_3 .card.main_vid .card-title { font-size: 14px; }
   .home_pg .frame_4 { padding: 1rem 0.5rem; }
+  .cat-page .cat-heading .panel-title { font-size: 1.5rem; }
   .cat-page .frame_2 .frame_2a .card .card-img-top { width: 100%; }
   .cat-page .frame_2 .frame_2a .card .card-body { width: 100%; }
+  .cat-page .frame_2 .frame_2b .card { margin: 15px 5px; }
+  .cat-page .frame_2 .frame_2b .card .card-body { padding: 5px; }
   .container.article-page .article-container .article-header .article-title { font-size: 1.2rem; }
   .container.article-page .article-container .article-header .social { float: left; }
   .specs-page .frame_1 .card { padding: 1rem; border: 1px solid #ff9000; }
@@ -441,6 +451,12 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .specs-page .frame_2 .specs_table .table_heading h2, .specs-page .frame_2 .about-phone .panel-heading .panel-title { line-height: 1.4; }
   .container.recipe-page .recipe-container .recipe-header .publish-details { margin-bottom: 0; }
   .container.recipe-page .recipe-container .recipe-header .social { float: left; }
-  .container.recipe-page .recipe-container .recipe-body .recipe-summary span, .container.recipe-page .recipe-container .recipe-body .recipe-details p span, .container.recipe-page .recipe-container .recipe-body .ingredients h2, .container.recipe-page .recipe-container .recipe-body .recipe-method h2 { letter-spacing: 2px; } }
+  .container.recipe-page .recipe-container .recipe-body .recipe-summary span, .container.recipe-page .recipe-container .recipe-body .recipe-details p span, .container.recipe-page .recipe-container .recipe-body .ingredients h2, .container.recipe-page .recipe-container .recipe-body .recipe-method h2 { letter-spacing: 2px; }
+  .container.video-page .frame_1 .video-container .video-header .video-title { font-size: 1.3rem; }
+  .container.video-page .frame_1 .video-container .video-header .social { float: left; }
+  .container.video-page .frame_1 .video-container .video-header .social a img { margin: 0.5rem; }
+  .container.video-page .frame_1 .video-container .video-header .video-exrpt { clear: both; margin-top: 3rem; }
+  .container.video-page .frame_1 .video-sidebar { margin-top: 2rem; margin-bottom: 1rem; }
+  .search-page .cat-heading .panel-title { margin-bottom: 1rem; font-size: 1.5rem; } }
 
 /*# sourceMappingURL=custom.css.map */
