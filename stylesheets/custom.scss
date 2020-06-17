@@ -237,7 +237,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 		.card {border:none; border-radius:0;
 			img {border-radius:0;}
 			.card-body{padding:0.5rem 0;
-				.card-title {font-size:014px; font-family:$title; font-weight:600;}
+				.card-title {font-size: 14px; font-family:$title; font-weight:600;}
 			} 
 		}
 	}
@@ -698,14 +698,32 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 	.home_pg .frame_3 .card.main_vid {width: 97%;}
 	.home_pg .frame_3 .card.card.main_vid .video-play-icon {top: 40%;}
 
-	.cat-page .frame_2 .frame_2b .frame-title span, .cat-page .latest-mobile .frame-title span {font-size: 1.5rem;}
-	.cat-page .frame_2 .frame_2b .card {width: 47%; margin: 10px; float: left;}
-	.cat-page .frame_2 .frame_2b .card .card-body {padding: 8px;}
-	.cat-page .frame_2 .frame_2b .card .card-body .card-title {font-size: 1rem;}
+	.cat-page .frame_2 .frame_2b .frame-title span,
+	.cat-page .latest-mobile .frame-title span, 
+	.container.article-page .frame_2a .frame-title span,
+	.container.article-page .frame_1 .frame-title span,
+	.specs-page .frame_2 .frame_2a .frame-title span {font-size: 1.5rem;}
+
+	.cat-page .frame_2 .frame_2b .card,
+	.container.article-page .frame_2a .card,
+	.specs-page .frame_2 .frame_2a .card {width: 47%; margin: 10px; float: left;}
+	
+	.cat-page .frame_2 .frame_2b .card .card-body,
+	.container.article-page .frame_2a .card .card-body,
+	.specs-page .frame_2 .frame_2a .card .card-body {padding: 8px;}
+	
+	.cat-page .frame_2 .frame_2b .card .card-body .card-title,
+	.container.article-page .frame_2a .card .card-body .card-title,
+	.container.article-page .frame_1 .card .card-body .card-title,
+	.specs-page .frame_2 .frame_2a .card .card-body h3 {font-size: 1rem;}
+
+	.story-first-published {margin: 1rem 0;}
+	.specs-page .frame_2 .specs_table .table_heading h2,
+	.specs-page .frame_2 .about-phone .panel-heading .panel-title {line-height: 1.4;}
 }
 
 @media only screen and (max-width: $breakpoint-phone-xl) {
-	.container {width: 100%; padding: 10px;}
+	.container {width: 97%; padding: 10px;}
 
 	.footer img {width: 92%; margin: 1rem; padding: 0.5rem 7.5rem; border-bottom: 2px solid #f2581a;}
 	.footer .page-list {box-shadow: inset 1px 1px 6px #ccc;}
@@ -721,6 +739,16 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 	.home_pg .frame_3 .col-lg-6 .video-play-icon {width: 3rem; padding: 10px 15px;}
 	.home_pg .frame_3 .card.main_vid .card-title {font-size: 14px;}
 	.home_pg .frame_4 {padding: 1rem 0.5rem;}
+
+	.container.article-page .article-container .article-header .article-title {font-size: 1.2rem;}
+	.container.article-page .article-container .article-header .social {float: left;}
+
+	.specs-page .frame_1 .card {padding: 1rem; border: 1px solid #ff9000;}
+	.specs-page .frame_1 .card .card-img-top {width: 20%; margin: 0 auto;}
+	.specs-page .frame_1 .cat-heading .panel-title {font-size: 1.3rem; margin-top: 2rem;}
+	.story-first-published {margin: 1rem 0;}
+	.specs-page .frame_2 .specs_table .table_heading h2,
+	.specs-page .frame_2 .about-phone .panel-heading .panel-title {line-height: 1.4;}
 }
 
 @media only screen and (max-width: $breakpoint-phone-sm) {
