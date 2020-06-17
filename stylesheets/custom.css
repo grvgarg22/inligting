@@ -397,7 +397,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 /*********************** MEDIA QUERIES ***********************/
 @media only screen and (min-width: 551px) and (max-width: 970px) { .footer img { width: 12rem; margin: 1rem; }
   .footer .page-list { padding: 12px; }
-  .footer .footer-story-links { padding: 1rem; }
+  .footer .footer-story-links { padding: 1.2rem; }
   .home_pg .frame_1 .frame_1a .card:first-child { margin-top: 0; }
   .home_pg .frame_1 .frame_1a .card { width: 48%; }
   .home_pg .frame_1b .card { margin: 5px; }
