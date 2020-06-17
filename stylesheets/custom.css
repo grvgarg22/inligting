@@ -428,6 +428,8 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .home_pg .frame_3 .col-lg-6 .video-play-icon { width: 3rem; padding: 10px 15px; }
   .home_pg .frame_3 .card.main_vid .card-title { font-size: 14px; }
   .home_pg .frame_4 { padding: 1rem 0.5rem; }
+  .cat-page .frame_2 .frame_2a .card .card-img-top { width: 100%; }
+  .cat-page .frame_2 .frame_2a .card .card-body { width: 100%; }
   .container.article-page .article-container .article-header .article-title { font-size: 1.2rem; }
   .container.article-page .article-container .article-header .social { float: left; }
   .specs-page .frame_1 .card { padding: 1rem; border: 1px solid #ff9000; }
