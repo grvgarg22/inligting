@@ -407,7 +407,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .home_pg .frame_3 .card { width: 47%; float: left; margin: 10px; }
   .home_pg .frame_3 .card.main_vid { width: 97%; }
   .home_pg .frame_3 .card.card.main_vid .video-play-icon { top: 40%; } }
-@media only screen and (max-width: 480px) { .footer img { width: 92%; margin: 1rem; padding: 0.5rem 7.5rem; border-bottom: 2px solid #f2581a; }
+@media only screen and (max-width: 560px) { .footer img { width: 92%; margin: 1rem; padding: 0.5rem 7.5rem; border-bottom: 2px solid #f2581a; }
   .footer .page-list { box-shadow: inset 1px 1px 6px #ccc; }
   .footer .page-list li { margin: 10px; }
   .footer .footer-story-links { padding: 1rem; }
