@@ -760,10 +760,11 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 }
 
 @media only screen and (max-width: $breakpoint-phone-xl) {
+	.navbar .navbar-brand img {width: 8rem;}
 	.container {width: 97%; padding: 10px;}
 	.story-first-published {margin: 1rem 0;}
 
-	.footer img {width: 92%; margin: 1rem; padding: 0.5rem 7.5rem; border-bottom: 2px solid #f2581a;}
+	.footer img {width: 92%; margin: 1rem; padding: 0.5rem 9rem; border-bottom: 2px solid #f2581a;}
 	.footer .page-list {box-shadow: inset 1px 1px 6px #ccc; padding: 1rem 0.5rem;}
 	.footer .page-list li {margin: 10px;}
 	.footer .footer-story-links {padding: 1rem;}
