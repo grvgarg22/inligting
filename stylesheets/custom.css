@@ -17,6 +17,8 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 
 .story-first-published span { color: #a1a1a1; font-size: 12px; letter-spacing: 1px; font-weight: 500; }
 
+.generic-heading { font-size: 1rem; font-weight: 600; margin: 1rem 0; }
+
 .navbar { border-top: 3px solid rgba(255, 144, 0, 0.92); top: 0; left: 0; right: 0; z-index: 999; padding: 0 1rem; box-shadow: 1px 1px 15px -9px #333; border-bottom: 1px solid #ddd; }
 .navbar .navbar-brand img { width: 10rem; }
 .navbar .input-group { width: 30%; border-bottom: 2px solid rgba(255, 144, 0, 0.92); transition: all 600ms; background: transparent; }
@@ -432,7 +434,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .contact-pg p { font-size: 1.1rem; padding: 1rem; }
   .contact-pg .message { padding: 0.5rem; }
   .contact-pg .panel { margin: 3rem 1rem; } }
-@media only screen and (max-width: 560px) { .navbar .navbar-brand img { width: 8rem; }
+@media only screen and (max-width: 560px) { .navbar .navbar-brand img { width: 7rem; }
   .container { width: 97%; padding: 10px; }
   .story-first-published { margin: 1rem 0; }
   .footer img { width: 92%; margin: 1rem; padding: 0.5rem 9rem; border-bottom: 2px solid #f2581a; }
