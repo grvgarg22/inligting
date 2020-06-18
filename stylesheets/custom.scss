@@ -274,7 +274,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 			.card-img-top {border-radius:0;}
 			.card-body {padding:8px;
 				.card-title {font-size:1.6rem; font-family:$title; font-weight:600;}
-				p {font-size:1.1rem;}
+				.card-text {font-size:1.1rem;}
 			}
 		}
 		.frame_1b {
@@ -786,6 +786,8 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 	.home_pg .frame_4 {padding: 1rem 0.5rem;}
 
 	.cat-page .cat-heading .panel-title {font-size: 1.3rem;}
+	.cat-page .frame_1 .card .card-body .card-title {font-size: 1.1rem;}
+	.cat-page .frame_1 .card .card-body .card-text {font-size: 1rem;}
 	.cat-page .frame_2 .frame_2a .card .card-img-top {width: 100%;}
 	.cat-page .frame_2 .frame_2a .card .card-body {width: 100%;}
 	.cat-page .frame_2 .frame_2b .card {margin: 15px 5px;}
@@ -808,6 +810,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 	.container.recipe-page .recipe-container .recipe-body .ingredients h2,
 	.container.recipe-page .recipe-container .recipe-body .recipe-method h2 {letter-spacing: 2px;}
 
+	.author-page .author-frame .panel-heading .panel-title,
 	.container.video-page .frame_1 .video-container .video-header .video-title {font-size: 1.3rem;}
 	.container.video-page .frame_1 .video-container .video-header .social {float: left;}
 	.container.video-page .frame_1 .video-container .video-header .social a img {margin: 0.5rem;}
