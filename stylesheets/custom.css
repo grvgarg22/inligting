@@ -13,7 +13,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 
 .container-fluid { margin: 1.5rem 0; }
 
-.story-first-published { padding: 5px 0 !important; margin: 1rem 0 3rem 0; border-bottom: 1px solid #ddd; border-top: 1px solid #ddd; }
+.story-first-published { padding: 5px 0 !important; margin: 1rem 0; border-bottom: 1px solid #ddd; border-top: 1px solid #ddd; }
 
 .story-first-published span { color: #a1a1a1; font-size: 12px; letter-spacing: 1px; font-weight: 500; }
 
@@ -56,6 +56,11 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 
 .table-light { font-size: 14px; }
 .table-light .thead-light th { background-color: rgba(255, 144, 0, 0.92); color: #fff; }
+
+.tags { margin-bottom: 3rem; }
+.tags ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; margin: 0; }
+.tags ul li { margin: 5px; border: 1px solid rgba(255, 144, 0, 0.92); padding: 0px 15px; font-size: 12px; line-height: 1.8; text-transform: capitalize; }
+.tags ul p { margin: 5px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; color: rgba(255, 144, 0, 0.92); }
 
 /*********************** Home page **********************/
 .home_pg { margin-top: 4rem; }
@@ -473,6 +478,8 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .container.recipe-page .recipe-container .recipe-header .publish-details { margin-bottom: 0; }
   .container.recipe-page .recipe-container .recipe-header .social { float: left; }
   .container.recipe-page .recipe-container .recipe-body .recipe-summary span, .container.recipe-page .recipe-container .recipe-body .recipe-details p span, .container.recipe-page .recipe-container .recipe-body .ingredients h2, .container.recipe-page .recipe-container .recipe-body .recipe-method h2 { letter-spacing: 2px; }
+  .author-page .author-frame .author-img { margin: 1rem 1rem 0.5rem 1rem; }
+  .author-page .author-frame .panel-heading p span { margin: 0; }
   .author-page .author-frame .panel-heading .panel-title, .container.video-page .frame_1 .video-container .video-header .video-title { font-size: 1.3rem; }
   .container.video-page .frame_1 .video-container .video-header .social { float: left; }
   .container.video-page .frame_1 .video-container .video-header .social a img { margin: 0.5rem; }

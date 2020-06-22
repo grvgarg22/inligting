@@ -17,7 +17,7 @@ body {font-family: $title;}
 a {color:#333;}
 a:hover, a:focus {text-decoration: none; color:#000;}
 .container-fluid {margin:1.5rem 0;}
-.story-first-published {padding: 5px 0 !important; margin: 1rem 0 3rem 0; border-bottom: 1px solid #ddd; border-top:1px solid #ddd;}
+.story-first-published {padding: 5px 0 !important; margin: 1rem 0; border-bottom: 1px solid #ddd; border-top:1px solid #ddd;}
 .story-first-published span {color:#a1a1a1; font-size: 12px; letter-spacing:1px; font-weight: 500;}
 .generic-heading {font-size: 1rem; font-weight: 600; margin: 1rem 0;}
 
@@ -80,6 +80,16 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 	.thead-light {
 		th {background-color: $accent; color:#fff;}
 	}
+}
+
+//-------------------------- TAGS
+
+.tags {margin-bottom: 3rem;
+	ul {list-style: none; padding: 0; display: flex; flex-wrap: wrap; margin: 0;
+		li {margin: 5px; border: 1px solid $accent; padding: 0px 15px; font-size: 12px; line-height: 1.8; text-transform: capitalize;}
+		p {margin: 5px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; color: $accent;}
+	}
+	
 }
 
 /*********************** Home page **********************/
@@ -812,6 +822,8 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 	.container.recipe-page .recipe-container .recipe-body .ingredients h2,
 	.container.recipe-page .recipe-container .recipe-body .recipe-method h2 {letter-spacing: 2px;}
 
+	.author-page .author-frame .author-img {margin: 1rem 1rem 0.5rem 1rem;}
+	.author-page .author-frame .panel-heading p span {margin: 0;}
 	.author-page .author-frame .panel-heading .panel-title,
 	.container.video-page .frame_1 .video-container .video-header .video-title {font-size: 1.3rem;}
 	.container.video-page .frame_1 .video-container .video-header .social {float: left;}
