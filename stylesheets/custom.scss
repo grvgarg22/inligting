@@ -436,7 +436,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 			img {width:100%; margin: 0;}
 		}
 		.image-caption {font-family:$title; font-size:12px; color:#888; border-bottom:1px solid $accent; padding: 0.6rem 0; text-align: center; margin:0;}
-		.recipe-body {font-family:$title; font-size:1.05rem; color:#444;
+		.recipe-body {font-family:$title; font-size: 1rem; color:#444;
 			.recipe-summary {font-family:$title; font-size:1rem; line-height: 1.6; border-bottom: 1px solid $accent; padding:1rem 0; margin-bottom:0;
 				span {text-transform: uppercase; margin-right: 1rem; font-size: 1rem; font-weight: 600; color: $accent; letter-spacing: 5px;}
 			}
@@ -548,7 +548,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 				img {width:100%; margin:0.8rem 0;}
 				.image-caption {font-family:$title; font-size:12px; color:#888; border-bottom:1px solid $accent; padding:0 0 0.6rem 0; text-align: center; margin-top:5px;}
 			}
-			.video-body {font-family:$title; font-size:1.05rem; color:#444;}
+			.video-body {font-family:$title; font-size: 1rem; color:#444;}
 		}
 		.video-sidebar {height: auto; margin-bottom: 5rem; overflow: auto; padding:0 10px 10px 10px;
 			.advt-card {margin-top:1rem !important;}
