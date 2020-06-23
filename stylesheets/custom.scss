@@ -215,7 +215,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 /*********************** article page **********************/
 
 .container.article-page {margin-top: 5rem;
-	.article-container {border-bottom: 1px solid $accent; margin:1rem 0 3rem 0; 
+	.article-container {border-bottom: 1px solid $accent; margin:1rem 0; 
 		.article-header {
 			.article-title {font-family:$title; font-size:2rem; font-weight:600;}
 			.article-exrpt {font-family:$title; font-size:14px; color:#888; font-weight:400;}
@@ -382,7 +382,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 			}
 			
 		}
-		.about-phone {margin: 3rem 0;
+		.about-phone {margin: 1rem 0; border-bottom: 1px solid #ff9000;
 			.panel-heading {
 				.panel-title {font-family:$title; font-weight:600; padding: 0; margin: 1rem 0.3rem 1.5rem; text-align: left; line-height: 0; border-bottom: 2px solid $accent;
 					span {text-transform: uppercase; padding: 5px 15px 5px 0; font-size: 1.2rem; background-color: #fff; color: #333; letter-spacing: 2px;}
@@ -406,14 +406,14 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 				.card-body {background-color: rgba(240, 52, 34, 0.90);}
 			}
 		}
-		.frame_faq {margin-top:2rem;}
+		.frame_faq {margin-top: 1rem;}
 	}
 }
 
 /*********************** recipe page **********************/
 
 .container.recipe-page {margin-top: 5rem;
-	.recipe-container {border-bottom: 1px solid $accent; margin:1rem 0 3rem 0; 
+	.recipe-container {border-bottom: 1px solid $accent; margin:1rem 0; 
 		.recipe-header {
 			.recipe-title {font-family:$title; font-size:2rem; font-weight:600;}
 			.recipe-exrpt {font-family:$title; font-size:14px; color:#888; font-weight:400;}
@@ -460,7 +460,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 				}
 			}
 			.recipe-method {
-				h2 {text-transform: uppercase; padding:10px; font-size: 1rem; font-weight: 600; background-color: $accent; color:#fff; letter-spacing: 5px;}
+				h2 {text-transform: uppercase; padding:10px; margin-bottom: 1rem; font-size: 1rem; font-weight: 600; background-color: $accent; color:#fff; letter-spacing: 5px;}
 				.steps {margin-bottom:1rem;
 					.steps-heading {font-size: 1rem; font-weight: 600; margin: 0;
 						span {margin-right:1rem;}
@@ -525,7 +525,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 
 .container.video-page {margin-top: 5rem;
 	.frame_1 {margin:1rem 0; 
-		.video-container {
+		.video-container {margin: 1rem 0; border-bottom: 1px solid #ff9000;
 			.video-header {
 				.video-title {font-family:$title; font-size:2rem; font-weight:600; margin-top: 1rem;}
 				.video-exrpt {font-family:$title; font-size:14px; color:#888; font-weight:400; padding-bottom:5px; border-bottom: 1px solid #ddd; line-height: 1.6;}

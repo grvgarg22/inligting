@@ -128,7 +128,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 
 /*********************** article page **********************/
 .container.article-page { margin-top: 5rem; }
-.container.article-page .article-container { border-bottom: 1px solid rgba(255, 144, 0, 0.92); margin: 1rem 0 3rem 0; }
+.container.article-page .article-container { border-bottom: 1px solid rgba(255, 144, 0, 0.92); margin: 1rem 0; }
 .container.article-page .article-container .article-header .article-title { font-family: "Montserrat", sans-serif; font-size: 2rem; font-weight: 600; }
 .container.article-page .article-container .article-header .article-exrpt { font-family: "Montserrat", sans-serif; font-size: 14px; color: #888; font-weight: 400; }
 .container.article-page .article-container .article-header .publish-details { display: inline-flex; float: left; }
@@ -218,7 +218,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 .specs-page .frame_2 .specs_table table thead tr th { background-color: #ff9914; color: #fff; text-transform: uppercase; font-weight: 600; font-size: 14px; padding: 10px; letter-spacing: 3px; border: none; }
 .specs-page .frame_2 .specs_table table tbody tr th { width: 40%; font-size: 12px; text-transform: capitalize; padding: 10px; }
 .specs-page .frame_2 .specs_table table tbody tr td { width: 60%; font-size: 12px; padding: 10px; }
-.specs-page .frame_2 .about-phone { margin: 3rem 0; }
+.specs-page .frame_2 .about-phone { margin: 1rem 0; border-bottom: 1px solid #ff9000; }
 .specs-page .frame_2 .about-phone .panel-heading .panel-title { font-family: "Montserrat", sans-serif; font-weight: 600; padding: 0; margin: 1rem 0.3rem 1.5rem; text-align: left; line-height: 0; border-bottom: 2px solid rgba(255, 144, 0, 0.92); }
 .specs-page .frame_2 .about-phone .panel-heading .panel-title span { text-transform: uppercase; padding: 5px 15px 5px 0; font-size: 1.2rem; background-color: #fff; color: #333; letter-spacing: 2px; }
 .specs-page .frame_2 .frame_2a .advt-card { margin-top: 1rem !important; }
@@ -230,11 +230,11 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 .specs-page .frame_2 .frame_2a .card .card-body .card-title { font-size: 0.9rem; text-align: center; font-weight: 600; margin: 0; font-family: "Montserrat", sans-serif; }
 .specs-page .frame_2 .frame_2a .card .card-body .card-title a { color: #ffffff; }
 .specs-page .frame_2 .frame_2a .card:hover .card-body { background-color: rgba(240, 52, 34, 0.9); }
-.specs-page .frame_2 .frame_faq { margin-top: 2rem; }
+.specs-page .frame_2 .frame_faq { margin-top: 1rem; }
 
 /*********************** recipe page **********************/
 .container.recipe-page { margin-top: 5rem; }
-.container.recipe-page .recipe-container { border-bottom: 1px solid rgba(255, 144, 0, 0.92); margin: 1rem 0 3rem 0; }
+.container.recipe-page .recipe-container { border-bottom: 1px solid rgba(255, 144, 0, 0.92); margin: 1rem 0; }
 .container.recipe-page .recipe-container .recipe-header .recipe-title { font-family: "Montserrat", sans-serif; font-size: 2rem; font-weight: 600; }
 .container.recipe-page .recipe-container .recipe-header .recipe-exrpt { font-family: "Montserrat", sans-serif; font-size: 14px; color: #888; font-weight: 400; }
 .container.recipe-page .recipe-container .recipe-header .publish-details { display: inline-flex; margin-bottom: 1rem; float: left; }
@@ -263,7 +263,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 .container.recipe-page .recipe-container .recipe-body .ingredients ul { padding: 0; list-style: none; display: flex; flex-wrap: wrap; margin-bottom: 0; clear: both; }
 .container.recipe-page .recipe-container .recipe-body .ingredients ul li { padding: 5px 10px; margin: 5px 10px 5px 0; border: 1px solid #ff9914; font-size: 14px; -webkit-transition: all 600ms; -moz-transition: all 600ms; transition: all 600ms; }
 .container.recipe-page .recipe-container .recipe-body .ingredients ul li:hover { background-color: rgba(255, 144, 0, 0.92); color: #fff; -webkit-transition: all 600ms; -moz-transition: all 600ms; transition: all 600ms; }
-.container.recipe-page .recipe-container .recipe-body .recipe-method h2 { text-transform: uppercase; padding: 10px; font-size: 1rem; font-weight: 600; background-color: rgba(255, 144, 0, 0.92); color: #fff; letter-spacing: 5px; }
+.container.recipe-page .recipe-container .recipe-body .recipe-method h2 { text-transform: uppercase; padding: 10px; margin-bottom: 1rem; font-size: 1rem; font-weight: 600; background-color: rgba(255, 144, 0, 0.92); color: #fff; letter-spacing: 5px; }
 .container.recipe-page .recipe-container .recipe-body .recipe-method .steps { margin-bottom: 1rem; }
 .container.recipe-page .recipe-container .recipe-body .recipe-method .steps .steps-heading { font-size: 1rem; font-weight: 600; margin: 0; }
 .container.recipe-page .recipe-container .recipe-body .recipe-method .steps .steps-heading span { margin-right: 1rem; }
@@ -302,6 +302,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 /********************* Video page ******************/
 .container.video-page { margin-top: 5rem; }
 .container.video-page .frame_1 { margin: 1rem 0; }
+.container.video-page .frame_1 .video-container { margin: 1rem 0; border-bottom: 1px solid #ff9000; }
 .container.video-page .frame_1 .video-container .video-header .video-title { font-family: "Montserrat", sans-serif; font-size: 2rem; font-weight: 600; margin-top: 1rem; }
 .container.video-page .frame_1 .video-container .video-header .video-exrpt { font-family: "Montserrat", sans-serif; font-size: 14px; color: #888; font-weight: 400; padding-bottom: 5px; border-bottom: 1px solid #ddd; line-height: 1.6; }
 .container.video-page .frame_1 .video-container .video-header .publish-details { display: inline-flex; margin-bottom: 5px; }
