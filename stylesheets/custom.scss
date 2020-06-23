@@ -446,7 +446,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 				}
 				ul {padding: 0; list-style: none; display: flex; flex-wrap: wrap; margin-bottom:0; clear: both;
 					li {margin: 5px 20px 5px 0; font-size:14px; -webkit-transition: all 600ms; -moz-transition: all 600ms; transition: all 600ms;
-						span {font-weight: 600; margin-right: 10px; text-transform: uppercase; color: #777;}
+						span {font-weight: 600; margin-right: 10px; text-transform: capitalize; color: #777;}
 					}
 				}
 			}
