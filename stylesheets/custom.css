@@ -265,7 +265,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 .container.recipe-page .recipe-container .recipe-body .ingredients ul li:hover { background-color: rgba(255, 144, 0, 0.92); color: #fff; -webkit-transition: all 600ms; -moz-transition: all 600ms; transition: all 600ms; }
 .container.recipe-page .recipe-container .recipe-body .recipe-method h2 { text-transform: uppercase; padding: 10px; font-size: 1rem; font-weight: 600; background-color: rgba(255, 144, 0, 0.92); color: #fff; letter-spacing: 5px; }
 .container.recipe-page .recipe-container .recipe-body .recipe-method .steps { margin-bottom: 1rem; }
-.container.recipe-page .recipe-container .recipe-body .recipe-method .steps .steps-heading { font-size: 1rem; font-weight: 600; }
+.container.recipe-page .recipe-container .recipe-body .recipe-method .steps .steps-heading { font-size: 1rem; font-weight: 600; margin: 0; }
 .container.recipe-page .recipe-container .recipe-body .recipe-method .steps .steps-heading span { margin-right: 1rem; }
 .container.recipe-page .recipe-container .recipe-body .recipe-method .steps img { width: 100%; }
 .container.recipe-page .frame_1 .frame-heading { font-family: "Montserrat", sans-serif; margin-bottom: 1rem; }
