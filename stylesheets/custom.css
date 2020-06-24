@@ -325,7 +325,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 .container.video-page .frame_1 .video-sidebar .card .card-img { position: relative; }
 .container.video-page .frame_1 .video-sidebar .card .video-play-icon { width: 2.5rem; position: absolute; top: 25%; -ms-transform: translateY(-50%); transform: translateY(-50%); left: 50%; -ms-transform: translateX(-50%); transform: translateX(-50%); background-color: rgba(0, 0, 0, 0.7); padding: 10px 15px; border-radius: 6px; -webkit-transition: all 600ms; -moz-transition: all 600ms; transition: all 600ms; }
 .container.video-page .frame_1 .video-sidebar .card .card-body { padding: 8px; }
-.container.video-page .frame_1 .video-sidebar .card .card-body .card-title { font-size: 14px; font-weight: 600; }
+.container.video-page .frame_1 .video-sidebar .card .card-body .card-title { font-size: 14px; font-weight: 600; margin: 0; }
 .container.video-page .frame_1 .video-sidebar .card:hover .video-play-icon { background-color: #ff0000; }
 .container.video-page .frame_2 { border-bottom: 1px solid rgba(255, 144, 0, 0.92); padding-bottom: 1.5rem; }
 .container.video-page .frame_2 .frame-heading { font-family: "Montserrat", sans-serif; margin-bottom: 1rem; }

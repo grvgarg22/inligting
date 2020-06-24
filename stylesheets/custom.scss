@@ -559,7 +559,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 				.card-img {position:relative;}
 				.video-play-icon {width: 2.5rem; position: absolute; top: 25%; -ms-transform: translateY(-50%); transform: translateY(-50%); left: 50%; -ms-transform: translateX(-50%); transform: translateX(-50%); background-color: rgba(0, 0, 0, 0.7); padding: 10px 15px; border-radius: 6px; -webkit-transition: all 600ms; -moz-transition: all 600ms; transition: all 600ms;}
 				.card-body {padding: 8px;
-					.card-title {font-size: 14px; font-weight:600;}
+					.card-title {font-size: 14px; font-weight:600; margin: 0;}
 				}
 			}
 			.card:hover {
