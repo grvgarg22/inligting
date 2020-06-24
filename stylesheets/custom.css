@@ -432,7 +432,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .cat-page .frame_2 .frame_2b .card .card-body, .container.article-page .frame_2a .card .card-body, .specs-page .frame_2 .frame_2a .card .card-body .container.recipe-page .frame_2a .card .card-body { padding: 8px; }
   .cat-page .frame_2 .frame_2b .card .card-body .card-title, .container.article-page .frame_2a .card .card-body .card-title, .container.article-page .frame_1 .card .card-body .card-title, .specs-page .frame_2 .frame_2a .card .card-body .card-title, .container.recipe-page .frame_2a .card .card-body .card-title { font-size: 1rem; }
   .story-first-published { margin: 1rem 0; }
-  .specs-page .frame_2 .specs_table .table_heading h2, .specs-page .frame_2 .about-phone .panel-heading .panel-title { line-height: 1.4; }
+  .specs-page .frame_2 .specs_table .table_heading h2, .specs-page .frame_2 .about-phone .panel-heading .panel-title { line-height: 1; padding: 5px 0; }
   .recipe-page .frame_1 { margin-top: 2rem; }
   .container.video-page .frame_1 .video-sidebar { margin-bottom: 1rem; margin-top: 2rem; }
   .container.video-page .frame_1 .video-sidebar .card .video-play-icon { top: 27%; }
