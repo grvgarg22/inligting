@@ -475,7 +475,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .specs-page .frame_1 .card { padding: 1rem; border: 1px solid #ff9000; }
   .specs-page .frame_1 .card .card-img-top { width: 20%; margin: 0 auto; }
   .specs-page .frame_1 .cat-heading .panel-title { font-size: 1.3rem; margin-top: 2rem; }
-  .specs-page .frame_2 .specs_table .table_heading h2, .specs-page .frame_2 .about-phone .panel-heading .panel-title { line-height: 1.4; }
+  .specs-page .frame_2 .specs_table .table_heading h2, .specs-page .frame_2 .about-phone .panel-heading .panel-title { line-height: 1; padding: 5px 0; }
   .container.recipe-page .recipe-container .recipe-header .recipe-title { font-size: 1.3rem; }
   .container.recipe-page .recipe-container .recipe-header .publish-details { margin-bottom: 0; }
   .container.recipe-page .recipe-container .recipe-header .social { float: left; }
