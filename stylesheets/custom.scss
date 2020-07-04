@@ -424,7 +424,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 
 /*********************** Sub Category page **********************/
 
-.sub-cat {
+.sub-cat-page {
 	.frame_2 {
 		.frame_2a {
 			.card {padding: 1rem;
@@ -740,6 +740,9 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 	.about-pg .our-team .row .card .card-body .social a img {margin: 0 0.5rem;}
 
 	.contact-pg .panel {margin: 3rem 1rem;}
+
+	.sub-cat-page .frame_2 .frame_2a .card {padding: 1rem; width: 44%; margin: 1rem; float: left;}
+	.sub-cat-page .frame_2 .frame_2a .card .card-img-top {width: 100%; margin-right: 1rem; padding: 16px 30%; margin-bottom: 1rem; border-bottom: 1px solid #ff9000;}
 } 
 
 
@@ -806,6 +809,8 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 	.contact-pg .message {padding: 0.5rem;}
 	.contact-pg .panel {margin: 3rem 1rem;}
 	
+	.sub-cat-page .frame_2 .frame_2a .card {padding: 1rem; width: 45%; margin: 1rem; float: left;}
+	.sub-cat-page .frame_2 .frame_2a .card .card-img-top {width: 100%; margin-right: 1rem; padding: 16px 30%; margin-bottom: 1rem; border-bottom: 1px solid #ff9000;}
 }
 
 @media only screen and (max-width: $breakpoint-phone-xl) {
@@ -836,6 +841,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 	.cat-page .cat-heading .panel-title {font-size: 1.3rem;}
 	.cat-page .sub-cat .card {width: 48%; margin: 0.5rem 0;}
 	.cat-page .sub-cat .card .card-body p a {font-size: 14px;}
+	.cat-page.sub-cat-page .frame_2a .card .card-img-top {padding: 16px 30%; margin-bottom: 1rem;	border-bottom: 1px solid #ff9000;}
 	.cat-page .frame_1 .card .card-body .card-title {font-size: 1.1rem;}
 	.cat-page .frame_1 .card .card-body .card-text {font-size: 1rem;}
 	.cat-page .frame_2 .frame_2a .card .card-img-top {width: 100%;}
