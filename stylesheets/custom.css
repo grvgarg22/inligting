@@ -168,7 +168,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 .cat-page .cat-heading .panel-title { font-family: "Montserrat", sans-serif; font-size: 2rem; font-weight: 600; padding: 0; margin: 1rem 0 2rem 0; text-align: center; line-height: 0; border-bottom: 2px solid rgba(255, 144, 0, 0.92); }
 .cat-page .cat-heading .panel-title span { text-transform: uppercase; padding: 5px 15px 5px 15px; background-color: #fff; color: #333; letter-spacing: 2px; }
 .cat-page .sub-cat { display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 1rem; }
-.cat-page .sub-cat .card { width: 22%; margin: 1rem 0; }
+.cat-page .sub-cat .card { width: 23%; margin: 1rem 0; }
 .cat-page .sub-cat .card .card-img-overlay { display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.5); }
 .cat-page .sub-cat .card .card-img-overlay p { margin: 0; }
 .cat-page .sub-cat .card .card-img-overlay p a { color: #fff; font-size: 1.2rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 600; }
