@@ -167,6 +167,11 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 .cat-page .cat-heading { margin-top: 2rem; height: auto; overflow: hidden; }
 .cat-page .cat-heading .panel-title { font-family: "Montserrat", sans-serif; font-size: 2rem; font-weight: 600; padding: 0; margin: 1rem 0 2rem 0; text-align: center; line-height: 0; border-bottom: 2px solid rgba(255, 144, 0, 0.92); }
 .cat-page .cat-heading .panel-title span { text-transform: uppercase; padding: 5px 15px 5px 15px; background-color: #fff; color: #333; letter-spacing: 2px; }
+.cat-page .sub-cat { display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 1rem; }
+.cat-page .sub-cat .card { width: 22%; margin: 1rem 0; }
+.cat-page .sub-cat .card .card-img-overlay { display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.5); }
+.cat-page .sub-cat .card .card-img-overlay p { margin: 0; }
+.cat-page .sub-cat .card .card-img-overlay p a { color: #fff; font-size: 1.2rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 600; }
 .cat-page .frame_1 { border-bottom: 1px solid rgba(255, 144, 0, 0.92); padding-bottom: 1.5rem; }
 .cat-page .frame_1 .card { margin: 1rem 0.3rem; border: none; border-radius: 0; }
 .cat-page .frame_1 .card .card-img-top { border-radius: 0; }
@@ -197,7 +202,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 .cat-page .latest-mobile .frame-title { font-family: "Montserrat", sans-serif; font-weight: 600; padding: 0; margin: 0.5rem 0.3rem 1.5rem 0.3rem; text-align: center; line-height: 0; border-bottom: 2px solid rgba(255, 144, 0, 0.92); }
 .cat-page .latest-mobile .frame-title span { text-transform: uppercase; padding: 5px 10px 5px 10px; font-size: 1.1rem; background-color: #fff; color: #333; letter-spacing: 1px; }
 
-/*************************** specs page ************************/
+/*************************** Specs Page ************************/
 .specs-page { margin-top: 5rem; }
 .specs-page .frame_1 .cat-heading { height: auto; overflow: hidden; color: rgba(255, 144, 0, 0.92); }
 .specs-page .frame_1 .cat-heading .panel-title { text-transform: uppercase; font-family: "Montserrat", sans-serif; font-size: 2rem; margin-top: 0.5rem; letter-spacing: 4px; font-weight: 600; }
@@ -420,6 +425,8 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .footer .page-list { padding: 11px; }
   .footer .footer-story-links { padding: 1.2rem; }
   .card.advt-card { width: 100% !important; clear: both; }
+  .cat-page .sub-cat .card { width: 24%; margin: 4px 0; }
+  .cat-page .sub-cat .card .card-img-overlay p a { font-size: 14px; }
   .home_pg .frame_1 .frame_1a .card:first-child { margin-top: 0; }
   .home_pg .frame_1 .frame_1a .card { width: 48%; }
   .home_pg .frame_1b .card { margin: 5px; }
@@ -464,6 +471,8 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .home_pg .frame_3 .card.main_vid .card-title { font-size: 14px; }
   .home_pg .frame_4 { padding: 1rem 0.5rem; }
   .cat-page .cat-heading .panel-title { font-size: 1.3rem; }
+  .cat-page .sub-cat .card { width: 48%; margin: 0.5rem 0; }
+  .cat-page .sub-cat .card .card-img-overlay p a { font-size: 14px; }
   .cat-page .frame_1 .card .card-body .card-title { font-size: 1.1rem; }
   .cat-page .frame_1 .card .card-body .card-text { font-size: 1rem; }
   .cat-page .frame_2 .frame_2a .card .card-img-top { width: 100%; }
