@@ -282,10 +282,10 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 		}
 	}
 	.sub-cat {display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 1rem;
-		.card {width: 23%; margin: 1rem 0;
-			.card-img-overlay {display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.5);
+		.card {width: 23%; margin: 0.5rem 0; border: none;
+			.card-body {display: flex; justify-content: center; align-items: center; padding: 0.25rem;
 				p {margin: 0;
-					a {color: #fff; font-size: 1.5rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;}
+					a {font-size: 1.2rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;}
 				}
 			}
 		}
@@ -725,7 +725,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 	.footer .footer-story-links {padding: 1.2rem;}
 	.card.advt-card {width: 100% !important; clear: both;}
 	.cat-page .sub-cat .card {width: 24%; margin: 4px 0;}
-	.cat-page .sub-cat .card .card-img-overlay p a {font-size: 14px;}
+	.cat-page .sub-cat .card .card-body p a {font-size: 14px;}
 
 	.home_pg .frame_1 .frame_1a .card:first-child {margin-top: 0;}
 	.home_pg .frame_1 .frame_1a .card {width: 48%;}
@@ -810,7 +810,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 
 	.cat-page .cat-heading .panel-title {font-size: 1.3rem;}
 	.cat-page .sub-cat .card {width: 48%; margin: 0.5rem 0;}
-	.cat-page .sub-cat .card .card-img-overlay p a {font-size: 14px;}
+	.cat-page .sub-cat .card .card-body p a {font-size: 14px;}
 	.cat-page .frame_1 .card .card-body .card-title {font-size: 1.1rem;}
 	.cat-page .frame_1 .card .card-body .card-text {font-size: 1rem;}
 	.cat-page .frame_2 .frame_2a .card .card-img-top {width: 100%;}
