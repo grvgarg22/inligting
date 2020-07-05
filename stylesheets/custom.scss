@@ -13,7 +13,7 @@ $breakpoint-phone-sm: 320px;
 body {font-family: $title;}
 .bg-light {background-color:rgba(255, 255, 255, 0.98) !important;}
 .breadcrumb {padding: 0.3rem; font-size: 0.8rem; margin-top: 2rem; margin-bottom: 1rem; background-color: transparent; border-radius: .25rem;}
-.advt-card {margin:1.5rem 0.5rem 2rem 0.5rem !important;}
+.advt-card {margin:1.5rem 0.5rem !important;}
 a {color:#333;}
 a:hover, a:focus {text-decoration: none; color:#000;}
 .container-fluid {margin:1.5rem 0;}
@@ -919,6 +919,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 	.contact-pg .message {padding: 0.5rem;}
 	.contact-pg .panel {margin: 3rem 1rem;}
 
+	.sub-cat-page .cat-heading .panel-title {font-size: 1.3rem; margin: 1rem 0 1rem 0;}
 	.sub-cat-page .frame_2 .frame_2a .card .card-image {width: 40%; margin: 0 0.5rem 0 0;}
 	.sub-cat-page .frame_2 .frame_2a .card .card-body {width: 55%; padding: 0.5rem;}
 	.sub-cat-page .frame_2 .frame_2a .card .card-body .card-title {letter-spacing: 0;}
