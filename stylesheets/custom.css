@@ -240,6 +240,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 .specs-page .frame_2 .frame_faq { margin-top: 1rem; }
 
 /*********************** Sub Category page **********************/
+.sub-cat-page { margin-top: 5rem; }
 .sub-cat-page .cat-heading { margin-top: 2rem; height: auto; overflow: hidden; }
 .sub-cat-page .cat-heading .panel-title { font-family: "Montserrat", sans-serif; font-size: 2rem; font-weight: 600; padding: 0; margin: 1rem 0 2rem 0; text-align: center; line-height: 0; border-bottom: 2px solid rgba(255, 144, 0, 0.92); }
 .sub-cat-page .cat-heading .panel-title span { text-transform: uppercase; padding: 5px 15px 5px 15px; background-color: #fff; color: #333; letter-spacing: 2px; }

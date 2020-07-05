@@ -424,7 +424,7 @@ a:hover, a:focus {text-decoration: none; color:#000;}
 
 /*********************** Sub Category page **********************/
 
-.sub-cat-page {
+.sub-cat-page {margin-top: 5rem;
 	.cat-heading {margin-top:2rem; height: auto; overflow: hidden;
 		.panel-title {font-family:$title; font-size:2rem; font-weight:600; padding: 0; margin:1rem 0 2rem 0; text-align: center; line-height: 0; border-bottom: 2px solid $accent;
 			span {text-transform: uppercase; padding: 5px 15px 5px 15px; background-color: #fff; color: #333; letter-spacing:2px;}
