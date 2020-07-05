@@ -240,15 +240,29 @@ a:hover, a:focus { text-decoration: none; color: #000; }
 .specs-page .frame_2 .frame_faq { margin-top: 1rem; }
 
 /*********************** Sub Category page **********************/
-.sub-cat-page .frame_2 .frame_2a .card { padding: 1rem; }
-.sub-cat-page .frame_2 .frame_2a .card .card-img-top { width: 10%; margin-right: 1rem; }
-.sub-cat-page .frame_2 .frame_2a .card .card-body { width: 87%; padding: 0.5rem; }
+.sub-cat-page .cat-heading { margin-top: 2rem; height: auto; overflow: hidden; }
+.sub-cat-page .cat-heading .panel-title { font-family: "Montserrat", sans-serif; font-size: 2rem; font-weight: 600; padding: 0; margin: 1rem 0 2rem 0; text-align: center; line-height: 0; border-bottom: 2px solid rgba(255, 144, 0, 0.92); }
+.sub-cat-page .cat-heading .panel-title span { text-transform: uppercase; padding: 5px 15px 5px 15px; background-color: #fff; color: #333; letter-spacing: 2px; }
+.sub-cat-page .frame_2 .frame_2a .card { padding: 1rem; display: inline-block; border: 1px solid rgba(255, 144, 0, 0.92); margin-top: 1rem; }
+.sub-cat-page .frame_2 .frame_2a .card .card-image { width: 10%; margin: 0 1rem 0 0; float: left; }
+.sub-cat-page .frame_2 .frame_2a .card .card-body { width: 87%; padding: 0.5rem; float: left; }
 .sub-cat-page .frame_2 .frame_2a .card .card-body .card-title { text-transform: capitalize; font-weight: 600; letter-spacing: 1px; }
-.sub-cat-page .frame_2 .frame_2a .card .card-body ul { padding: 0; margin: .5rem 0; }
-.sub-cat-page .frame_2 .frame_2a .card .card-body ul p { font-size: 14px; font-family: "Montserrat", sans-serif; margin: 0; color: rgba(255, 144, 0, 0.92); letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
-.sub-cat-page .frame_2 .frame_2a .card .card-body ul li { font-size: 12px; color: #666; display: inline-block; width: 13rem; margin: 0 0.5rem 0 0; padding: 0; border: none; }
+.sub-cat-page .frame_2 .frame_2a .card .card-body ul { padding: 0; margin: .5rem 0; display: flex; flex-wrap: wrap; list-style: none; justify-content: space-between; }
+.sub-cat-page .frame_2 .frame_2a .card .card-body ul p { font-size: 14px; width: 100%; font-family: "Montserrat", sans-serif; margin: 0; color: rgba(255, 144, 0, 0.92); letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+.sub-cat-page .frame_2 .frame_2a .card .card-body ul li { font-size: 12px; color: #666; width: 49%; text-align: center; margin: 5px 0; padding: 5px; border: 1px dashed #ff9000; border-radius: 1rem; }
 .sub-cat-page .frame_2 .frame_2a .card .card-body ul li span { font-weight: 600; color: #333; margin-right: 0.5rem; letter-spacing: 1px; }
 .sub-cat-page .frame_2 .frame_2a .card .card-body .view-more { float: right; font-size: 12px; font-weight: 600; color: rgba(255, 144, 0, 0.92); margin-top: 10px; }
+.sub-cat-page .frame_2 .frame_2b .advt-card { margin-top: 1rem !important; }
+.sub-cat-page .frame_2 .frame_2b .frame-title { font-family: "Montserrat", sans-serif; font-weight: 600; padding: 0; margin: 0.5rem 0.3rem 1.5rem 0.3rem; text-align: center; line-height: 0; border-bottom: 2px solid rgba(255, 144, 0, 0.92); }
+.sub-cat-page .frame_2 .frame_2b .frame-title span { text-transform: uppercase; padding: 5px 10px 5px 10px; font-size: 1.1rem; background-color: #fff; color: #333; letter-spacing: 1px; }
+.sub-cat-page .frame_2 .frame_2b .card { margin: 0.8rem 0.3rem; border: none; border-radius: 0; position: relative; }
+.sub-cat-page .frame_2 .frame_2b .card .card-img-top { border-radius: 0; }
+.sub-cat-page .frame_2 .frame_2b .card .card-body { padding: 2px; position: absolute; left: 0; right: 0; bottom: 0; background-color: rgba(255, 144, 0, 0.92); -webkit-transition: all 600ms; -moz-transition: all 600ms; transition: all 600ms; }
+.sub-cat-page .frame_2 .frame_2b .card .card-body .card-title { font-size: 14px; text-align: center; font-weight: 600; margin: 0; font-family: "Montserrat", sans-serif; }
+.sub-cat-page .frame_2 .frame_2b .card .card-body .card-title a { color: #ffffff; }
+.sub-cat-page .frame_2 .frame_2b .card:hover .card-body { background-color: rgba(240, 52, 34, 0.9); }
+.sub-cat-page .latest-mobile .frame-title { font-family: "Montserrat", sans-serif; font-weight: 600; padding: 0; margin: 0.5rem 0.3rem 1.5rem 0.3rem; text-align: center; line-height: 0; border-bottom: 2px solid rgba(255, 144, 0, 0.92); }
+.sub-cat-page .latest-mobile .frame-title span { text-transform: uppercase; padding: 5px 10px 5px 10px; font-size: 1.1rem; background-color: #fff; color: #333; letter-spacing: 1px; }
 
 /*********************** recipe page **********************/
 .container.recipe-page { margin-top: 5rem; }
@@ -433,8 +447,8 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .about-pg .our-team .row .card:hover .card-body { padding: 1rem; }
   .about-pg .our-team .row .card .card-body .social a img { margin: 0 0.5rem; }
   .contact-pg .panel { margin: 3rem 1rem; }
-  .sub-cat-page .frame_2 .frame_2a .card { padding: 1rem; width: 44%; margin: 1rem; float: left; }
-  .sub-cat-page .frame_2 .frame_2a .card .card-img-top { width: 100%; margin-right: 1rem; padding: 16px 30%; margin-bottom: 1rem; border-bottom: 1px solid #ff9000; } }
+  .sub-cat-page .frame_2 .frame_2a .card .card-image { width: 13%; }
+  .sub-cat-page .frame_2 .frame_2a .card .card-body { width: 84%; } }
 @media only screen and (min-width: 551px) and (max-width: 1020px) { .container { max-width: 98%; padding: 10px; }
   .footer img { width: 12rem; margin: 1rem; }
   .footer .page-list { padding: 11px; }
@@ -463,9 +477,7 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .contact-pg h1, .contact-pg h2 { font-size: 1.5rem; letter-spacing: 2px; font-weight: 600; margin-bottom: 1rem; }
   .contact-pg p { font-size: 1.1rem; padding: 1rem; }
   .contact-pg .message { padding: 0.5rem; }
-  .contact-pg .panel { margin: 3rem 1rem; }
-  .sub-cat-page .frame_2 .frame_2a .card { padding: 1rem; width: 45%; margin: 1rem; float: left; }
-  .sub-cat-page .frame_2 .frame_2a .card .card-img-top { width: 100%; margin-right: 1rem; padding: 16px 30%; margin-bottom: 1rem; border-bottom: 1px solid #ff9000; } }
+  .contact-pg .panel { margin: 3rem 1rem; } }
 @media only screen and (max-width: 560px) { .navbar .navbar-brand img { width: 7rem; }
   .container { width: 97%; padding: 10px; }
   .story-first-published { margin: 1rem 0; }
@@ -490,7 +502,6 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .cat-page .cat-heading .panel-title { font-size: 1.3rem; }
   .cat-page .sub-cat .card { width: 48%; margin: 0.5rem 0; }
   .cat-page .sub-cat .card .card-body p a { font-size: 14px; }
-  .cat-page.sub-cat-page .frame_2a .card .card-img-top { padding: 16px 30%; margin-bottom: 1rem; border-bottom: 1px solid #ff9000; }
   .cat-page .frame_1 .card .card-body .card-title { font-size: 1.1rem; }
   .cat-page .frame_1 .card .card-body .card-text { font-size: 1rem; }
   .cat-page .frame_2 .frame_2a .card .card-img-top { width: 100%; }
@@ -525,6 +536,10 @@ a:hover, a:focus { text-decoration: none; color: #000; }
   .about-pg .our-team .row .card { margin: 1rem 0.5rem; }
   .contact-pg p { font-size: 1.2rem; }
   .contact-pg .message { padding: 0.5rem; }
-  .contact-pg .panel { margin: 3rem 1rem; } }
+  .contact-pg .panel { margin: 3rem 1rem; }
+  .sub-cat-page .frame_2 .frame_2a .card .card-image { width: 40%; margin: 0 0.5rem 0 0; }
+  .sub-cat-page .frame_2 .frame_2a .card .card-body { width: 55%; padding: 0.5rem; }
+  .sub-cat-page .frame_2 .frame_2a .card .card-body .card-title { letter-spacing: 0; }
+  .sub-cat-page .frame_2 .frame_2a .card .card-body ul li { width: 100%; } }
 
 /*# sourceMappingURL=custom.css.map */
