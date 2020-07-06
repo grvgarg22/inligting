@@ -1,0 +1,521 @@
+<!doctype html>
+<html amp lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script async src="https://cdn.ampproject.org/v0.js"></script>
+		<title>Samsung Galaxy S10</title>
+		<link rel="shortcut icon" type="image/svg" href="img/favicon.svg">
+		<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+		<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+		<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+		<link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+		<style amp-boilerplate>
+			body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+		</style>
+		<noscript>
+			<style amp-boilerplate>
+				body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+			</style>
+		</noscript>
+
+		<!---- Custom Style --->
+		<style amp-custom>
+			
+			/*********** misc ***********/
+			
+			body{font-family: 'Montserrat', sans-serif;}
+			a {text-decoration: none; color: #333;}
+			div {height: auto; overflow: auto;}
+			.mx-auto {margin-left: auto; margin-right: auto;}
+			.bordered {border: 1px solid #ff9000;}
+			.pr2 {padding-right: 1rem;}
+			.pr4 {padding-right: 2rem;}
+			.pl2 {padding-left: 1rem;}
+			.justify-start {-ms-flex-pack: start; justify-content: flex-start;}
+			.items-center {-ms-flex-align: center; align-items: center;}
+			.flex {display: -ms-flexbox; display: flex;}
+			.wrapper {margin-top: 4rem; padding: 1rem;}
+			.generic-heading {font-size: 1rem; font-weight: 600; margin: 1rem 0;}
+
+			/************* Header **************/
+			
+			.ampstart-headerbar {background-color: #fff; color: #000; padding: 8px 0; z-index: 999; box-shadow: 0 0 5px 2px rgba(0,0,0,.1); width: 100%; border-top: 3px solid #ff9000; position: fixed; top: 0; left: 0; right: 0;}
+			.ampstart-headerbar amp-img {position: fixed; top: 10px; left: 0; right: 0;}
+			.ampstart-navbar-trigger {line-height: 2.5rem; font-size: 2rem; margin-left: 1rem;}
+			.desktop-sidebar {background-color: #fff; width: 70%; border-right: 3px solid #ff9000;}
+			.desktop-sidebar .close {margin: 1rem; border: none; font-size: 1.5rem; background: transparent;}
+			.desktop-sidebar .close:focus {outline: none;}
+			.desktop-sidebar ul {list-style: none; padding: 1.5rem; margin: 0;}
+			.desktop-sidebar ul li {margin: 0 0 2rem 0;}
+			.desktop-sidebar ul li a {color:#555; font-size: 1rem; text-decoration: none; letter-spacing: 1px; text-transform: uppercase;}
+			.desktop-sidebar form {padding: 0;}
+			.desktop-sidebar form input {width: 92%; font-size:1rem; border-radius: 0; border-top: 0; border-left: 0; border-right: 0; border-bottom: 1px solid #ff9000;}
+			.desktop-sidebar form input:focus {outline: none;}
+
+			/******************** Breadcrumb ************/
+			
+			.amp-wp-content {margin: 0 auto; max-width: inherit; overflow: hidden; width: 100%;}
+			.amp-wp-content .m-breadcrumb {list-style-type: none; margin: 0; padding: 0; margin-bottom: 2rem;}
+			.amp-wp-content .m-breadcrumb>li {display: inline; color: #7b7b7b; font-size: 15px; line-height: 22px;}
+			.amp-wp-content .m-breadcrumb>li>a {color: #ff9000; text-decoration: none;}
+			.amp-wp-content .m-breadcrumb>li+li:before {content: "/\00a0"; color: #7b7b7b; padding-left: 8px; padding-right: 4px;}
+
+			/****************** Footer *****************/
+			
+			footer {background-color: #f1f1f1;}
+			footer .page-list {box-shadow: inset 1px 1px 6px #ccc; padding: 1rem 0.5rem;}
+			footer .page-list amp-img {margin: 0 0.5rem; padding: 1rem 29%; background-color: #fff; border-radius: 2rem; border-bottom: 2px solid #f2581a; border-left: 2px solid #f56718; border-top: 2px solid #ff9914; border-right: 2px solid #fec507;}
+			footer .page-list ul {list-style: none; padding: 0;}
+			footer .page-list li {margin: 10px; display: inline-flex;}
+			footer .page-list li a {text-transform: uppercase; font-size: 13px; color: rgba(255, 144, 0, 0.92); font-weight: 600;}
+			footer .footer-stories {padding: 1rem; background-color: #fff;}
+			footer .footer-stories .story-cat {width: 100%; height: auto; overflow: auto; margin-bottom: 1rem;}
+			footer .footer-stories .story-cat p {font-size: 14px; text-transform: uppercase; text-align: left; font-weight: 600; margin: 8px 0;}
+			footer .footer-stories .story-cat p a {color: #ff9000;}
+			footer .footer-stories .story-cat ul {list-style: none; padding: 0; margin: 0;}
+			footer .footer-stories .story-cat ul li {margin: 8px 5px; width: 44%; border-left: 2px solid #ff9000; padding-left: 5px; float: left; line-height: 1.2;}
+			footer .footer-stories .story-cat ul li a {font-size: 12px;}
+			footer .footnote {text-align: center; background-color: rgba(255, 144, 0, 0.92); padding: 5px; text-transform: capitalize;}
+			footer .footnote p {margin: 0; font-size: 12px; color: #fff;}
+
+			/****************** Thumbnail ***************/
+
+			.thumbnail {margin-bottom: 1rem; height: auto; overflow: auto;}
+			.thumbnail .thumb-body {padding: 0.5rem;}
+			.thumbnail .thumb-body .thumb-title  {margin: 0;}
+			.thumbnail .thumb-body .thumb-title a {text-decoration: none; color: #333; font-size: 1rem; font-weight: 600;}
+			.thumbnail .thumb-body .thumb-desc {font-size: 14px; margin: 0;}
+			
+			.thumbnail-overlay-text {position: relative; margin-bottom: 1rem; height: auto; overflow: auto;}
+			.thumbnail-overlay-text .thumb-body {position: absolute; bottom: 0; left: 0; right: 0; padding: 5px; background-color: rgba(255, 144, 0, 0.92);}
+			.thumbnail-overlay-text .thumb-body .thumb-title  {margin: 0; text-align: center;}
+			.thumbnail-overlay-text .thumb-body .thumb-title a {text-decoration: none; color: #fff; font-weight: 600; font-size: 14px;}
+
+			/************** Page Body ******************/
+			
+			.specs {padding-bottom: 0.5rem; line-height: 1.4;}
+			.specs .specs-header {height: auto; overflow: auto; margin-bottom: 5px;}
+			.specs .specs-header .specs-image {padding: 1rem; border: 1px solid #ff9000;}
+			.specs .specs-header .specs-image amp-img {width: 20%; margin: 0 auto;}
+			.specs .specs-header .specs-title {font-size: 1.3rem; text-transform: uppercase; letter-spacing: 2px;}
+			.specs .specs-header .specs-exerpt {font-size: 14px; color: #888; font-weight: 400; line-height: 1.6;}
+			.specs .specs-header ul {padding: 0; margin: 1.5rem 0 0 0;}
+			.specs .specs-header ul p {font-size: 14px; margin: 0; color: rgba(255, 144, 0, 0.92); letter-spacing: 4px; text-transform: uppercase; font-weight: 600;}
+			.specs .specs-header ul li {font-size: 12px; color: #666; display: inline-block; width: 15rem; margin: 0.5rem 1rem 0.5rem 0; padding: 0 0.5rem; border-left: 2px solid rgba(255, 144, 0, 0.92);}
+			.specs .specs-header ul li span {font-weight: 600; color: #333; margin-right: 0.5rem; letter-spacing: 1px;}
+			.specs .specs-header .price {color: #333; font-size: 14px; margin: 0.5rem 0;}
+			.specs .specs-header .price span {font-weight: 600; letter-spacing: 2px; margin-right: 10px; text-transform: uppercase;}
+			.specs .specs-header .social {display: flex; flex-wrap: wrap;}
+			.specs .specs-header .social a {padding: 0;}
+			.specs .specs-header .social a amp-img {width: 1.5rem; margin: 1rem 0.5rem;}
+			.specs .specs-header .story-first-published {padding: 5px 0; margin: 0.5rem 0 1rem 0; border-bottom: 1px solid #ddd; border-top: 1px solid #ddd;}
+			.specs .specs-header .story-first-published span {color: #a1a1a1; font-size: 12px; letter-spacing: 1px; font-weight: 500;}
+			.specs .specs-body {font-size: 1rem; color: #444; border-bottom: 1px solid #ff9000;}
+			.specs .specs-body .table_heading h2 {font-weight: 600; margin: 0 0.3rem 1.5rem; text-align: left; border-bottom: 2px solid rgba(255, 144, 0, 0.92); line-height: 1.4; padding: 5px 0;}
+			.specs .specs-body .table_heading span {text-transform: uppercase; padding: 5px 15px 5px 0; font-size: 1.2rem; background-color: #fff; color: #333; letter-spacing: 2px;}
+			.specs .specs-body h1, .specs .specs-body h2, .specs .specs-body h3, .specs .specs-body h4,	.specs .specs-body h5, .specs .specs-body h6 {font-size: 1rem; font-weight: 600; margin: 1rem 0;}
+			.specs .specs-body .about-phone {margin: 1rem 0;}
+			.specs .specs-body .about-phone .panel-heading .panel-title {font-weight: 600; padding: 5px 0; margin: 1rem 0.3rem 1.5rem; text-align: left; line-height: 1.4; border-bottom: 2px solid rgba(255, 144, 0, 0.92);}
+			.specs .specs-body .about-phone .panel-heading .panel-title span {text-transform: uppercase; padding: 5px 15px 5px 0; font-size: 1.2rem; background-color: #fff; color: #333; letter-spacing: 2px;}
+			.specs .specs-body .about-phone p {margin: 0;}
+			.specs .specs-footer .frame_faq {margin-bottom: 0;}
+			.specs .specs-footer .frame_faq .frame-title {font-weight: 600; padding: 5px 10px; text-align: center; color: #fff; background-color: rgba(255, 144, 0, 0.92); font-size: 1rem; text-transform: capitalize;}
+			.specs .specs-footer .frame_faq .ques_ans {margin: 1rem 0; padding: 10px 15px; border: 1px solid rgba(255, 144, 0, 0.92);}
+			.specs .specs-footer .frame_faq .ques_ans .question {font-weight: 600; margin: 0 0 5px 0;}
+			.specs .specs-footer .frame_faq .ques_ans .question span {margin-right: 1rem;}
+			.specs .specs-footer .frame_faq .ques_ans .answer {margin: 0; color: #333;}
+			.specs .specs-footer .story-first-published {padding: 5px 0; margin: 0.5rem 0 1rem 0; border-bottom: 1px solid #ddd; border-top: 1px solid #ddd;}
+			.specs .specs-footer .story-first-published span {color: #a1a1a1; font-size: 12px; letter-spacing: 1px; font-weight: 500;}
+			.specs .specs-footer .tags {margin-bottom: 2rem;}
+			.specs .specs-footer .tags ul {list-style: none; padding: 0; display: flex; flex-wrap: wrap; margin: 0;}
+			.specs .specs-footer .tags ul p {margin: 5px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; color: rgba(255, 144, 0, 0.92);}
+			.specs .specs-footer .tags ul li {margin: 5px; border: 1px solid rgba(255, 144, 0, 0.92); padding: 0px 15px; font-size: 12px; line-height: 1.8; text-transform: capitalize;}
+
+			.table-light {font-size: 12px;}
+			.table-light, .table-light>td, .table-light>th {background-color: #fdfdfe;}
+			.table {width: 100%; margin-bottom: 1rem; color: #212529; border-collapse: collapse;}
+			.table td, .table th {padding: .75rem; vertical-align: top;}
+			.table-light .thead-light th {background-color: #ff9914; color: #fff; text-transform: uppercase; font-weight: 600; font-size: 14px; padding: 10px; letter-spacing: 3px; border: none; text-align: left;}
+			.table-light tbody tr th {width: 40%; font-size: 12px; text-transform: capitalize; padding: 10px; text-align: left;}
+			.table-striped tbody tr:nth-of-type(odd) {background-color: rgba(0,0,0,.05);}
+
+			.frame_2a {margin-bottom: 1rem;}
+			.frame_title {font-weight: 600; padding: 0; margin: 0.5rem 0.3rem 1.5rem 0.3rem; text-align: center; line-height: 0; border-bottom: 2px solid rgba(255, 144, 0, 0.92);}
+			.frame_title span {text-transform: uppercase; padding: 5px 10px 5px 10px; font-size: 1.1rem; background-color: #fff; color: #333; letter-spacing: 1px;}
+		</style>
+	</head>
+	<body>
+		<header class="ampstart-headerbar flex justify-start items-center pr4 ">
+			<div class="ampstart-navbar-trigger" role="button" on="tap:sidebar-desktop.toggle" aria-label="Click to open sidebar" tabindex=" ">☰
+			</div>
+			<a href="#" title="Inligting"><amp-img class="mx-auto" src="img/inligting-logo.svg" alt="logo" height="45" width="130"></amp-img></a>
+		</header>
+		<amp-sidebar id="sidebar-desktop" class="desktop-sidebar" layout="nodisplay" side="left">
+			<button class="close" on="tap:sidebar-desktop.close">X</button>
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Videos</a></li>
+					<li><a href="#">Mobiles</a></li>
+					<form class="sample-form" method="post" action-xhr="/documentation/examples/api/submit-form-input-text-xhr" target="_top" custom-validation-reporting="show-all-on-submit">
+						<input type="text" id="show-all-on-submit-search" name="Search" placeholder="Search...">
+					</form>
+				</ul>
+			</nav>
+		</amp-sidebar>
+		<div class="wrapper">
+			<div class="specs">
+				<div class="specs-header">
+					<div class="specs-image">
+						<amp-img src="img/mob7.jpg" layout="responsive" width="72" height="133"></amp-img>
+					</div>
+					<h1 class="specs-title">samsung galaxy s10</h1>
+					<h2 class="specs-exerpt">Samsung Galaxy S10 sports a 6.1-inch QHD+ display with a screen resolution of 3040 x 1440 pixels. The device is powered by an octa-core processor, 8GB RAM and 128GB internal storage which can be expanded up to 512GB via micro SD card.</h2>
+					<ul>
+						<p><span>key specs:</span></p>
+						<li><span>Launch:</span> 22 February, 2019</li>
+						<li><span>OS:</span> Android 9.0</li>
+						<li><span>Processor:</span> Octa core 2.7GHz</li>
+						<li><span>Battery:</span> 3400 mAh</li>
+						<li><span>Display:</span> 6.1 inches</li>
+						<li><span>Resolution:</span> 1440 x 3040 pixels</li>
+						<li><span>RAM:</span> 8 GB</li>
+						<li><span>Camera:</span> 12MP + 12MP + 16MP</li>
+						<li><span>Expandable:</span> 512 GB</li>
+					</ul>
+					<p class="price"><span>Price:</span>Rs.56,000 (onwards)</p>
+					<div class="social justify-content-center">
+						<a class="nav-item nav-link" href="#"><amp-img src="img/facebook.svg" layout="responsive" width="30" height="30"></amp-img></a>
+						<a class="nav-item nav-link" href="#"><amp-img src="img/linkedin.svg" layout="responsive" width="30" height="30"></amp-img></a>
+						<a class="nav-item nav-link" href="#"><amp-img src="img/join.svg" layout="responsive" width="30" height="30"></amp-img></a>
+						<a class="nav-item nav-link" href="#"><amp-img src="img/twitter.svg" layout="responsive" width="30" height="30"></amp-img></a>
+						<a class="nav-item nav-link" href="#"><amp-img src="img/whatsapp.svg" layout="responsive" width="30" height="30"></amp-img></a>
+					</div>
+					<div class="story-first-published">
+						<span> First Published </span>
+						<span>|</span>
+						<span> Thursday </span>
+						<span>|</span>
+						<span> 31 October, 2015 </span>
+						<span>,</span>
+						<span> 03:33 PM </span>
+					</div>
+				</div>
+				<div class="specs-body">
+					<div class="table_heading">
+						<h2><span>Samsung galaxy s10 full specifications</span></h2>
+					</div>
+					<table class="table table-striped table-light">
+						<thead class="thead-light">
+							<tr>
+								<th colspan="4">Design</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Height</th>
+								<td>138.4 mm</td>
+							</tr>
+							<tr>
+								<th>Width</th>
+								<td>67.3 mm</td>
+							</tr>
+							<tr>
+								<th>Thickness</th>
+								<td>7.3 mm</td>
+							</tr>
+							<tr>
+								<th>Weight</th>
+								<td>148 grams</td>
+							</tr>
+							<tr>
+								<th>Build Material</th>
+								<td>Front: Gorilla Glass 5<br>Back: Mineral Glass</td>
+							</tr>
+							<tr>
+								<th>Colours</th>
+								<td>Black, Red, White</td>
+							</tr>
+							<tr>
+								<th>Waterproof</th>
+								<td>Water resistant (up to 30 minutes in a depth of 1 meter), IP67</td>
+							</tr>
+							<tr>
+								<th>Ruggedness</th>
+								<td>Dust proof</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="table table-striped table-light">
+						<thead class="thead-light">
+							<tr>
+								<th colspan="4">Display</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Height</th>
+								<td>138.4 mm</td>
+							</tr>
+							<tr>
+								<th>Width</th>
+								<td>67.3 mm</td>
+							</tr>
+							<tr>
+								<th>Thickness</th>
+								<td>7.3 mm</td>
+							</tr>
+							<tr>
+								<th>Weight</th>
+								<td>148 grams</td>
+							</tr>
+							<tr>
+								<th>Build Material</th>
+								<td>Front: Gorilla Glass 5<br>Back: Mineral Glass</td>
+							</tr>
+							<tr>
+								<th>Colours</th>
+								<td>Black, Red, White</td>
+							</tr>
+							<tr>
+								<th>Waterproof</th>
+								<td>Water resistant (up to 30 minutes in a depth of 1 meter), IP67</td>
+							</tr>
+							<tr>
+								<th>Ruggedness</th>
+								<td>Dust proof</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="table table-striped table-light">
+						<thead class="thead-light">
+							<tr>
+								<th colspan="4">performance</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Height</th>
+								<td>138.4 mm</td>
+							</tr>
+							<tr>
+								<th>Width</th>
+								<td>67.3 mm</td>
+							</tr>
+							<tr>
+								<th>Thickness</th>
+								<td>7.3 mm</td>
+							</tr>
+							<tr>
+								<th>Weight</th>
+								<td>148 grams</td>
+							</tr>
+							<tr>
+								<th>Build Material</th>
+								<td>Front: Gorilla Glass 5<br>Back: Mineral Glass</td>
+							</tr>
+							<tr>
+								<th>Colours</th>
+								<td>Black, Red, White</td>
+							</tr>
+							<tr>
+								<th>Waterproof</th>
+								<td>Water resistant (up to 30 minutes in a depth of 1 meter), IP67</td>
+							</tr>
+							<tr>
+								<th>Ruggedness</th>
+								<td>Dust proof</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="table table-striped table-light">
+						<thead class="thead-light">
+							<tr>
+								<th colspan="4">Camera</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Height</th>
+								<td>138.4 mm</td>
+							</tr>
+							<tr>
+								<th>Width</th>
+								<td>67.3 mm</td>
+							</tr>
+							<tr>
+								<th>Thickness</th>
+								<td>7.3 mm</td>
+							</tr>
+							<tr>
+								<th>Weight</th>
+								<td>148 grams</td>
+							</tr>
+							<tr>
+								<th>Build Material</th>
+								<td>Front: Gorilla Glass 5<br>Back: Mineral Glass</td>
+							</tr>
+							<tr>
+								<th>Colours</th>
+								<td>Black, Red, White</td>
+							</tr>
+							<tr>
+								<th>Waterproof</th>
+								<td>Water resistant (up to 30 minutes in a depth of 1 meter), IP67</td>
+							</tr>
+							<tr>
+								<th>Ruggedness</th>
+								<td>Dust proof</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="about-phone">
+						<div class="panel-heading">
+							<h2 class="panel-title"><span>About samsung galaxy s10</span></h2>
+						</div>
+						<p>Samsung Galaxy S10 sports a 6.1-inch QHD+ display with a screen resolution of 3040 x 1440 pixels. The device is powered by an octa-core processor, 8GB RAM and 128GB internal storage which can be expanded up to 512GB via micro SD card.</p>
+					</div>
+				</div>
+				<div class="specs-footer">
+					<div class="frame_faq">
+						<h2 class="frame-title">Frequently Asked Questions</h2>
+						<div class="ques_ans">
+							<p class="question"><span>1.</span>What is fried chicken batter made of ?</p>
+							<p class="answer">In one medium bowl, mix together 3 cups of flour, garlic salt, 1 tablespoon black pepper, paprika and poultry seasoning. In a separate bowl, stir together 1 1/3 cups flour, salt, 1/4 teaspoon pepper, egg yolks and beer. You may need to thin with additional beer if the batter is too thick</p>
+						</div>
+						<div class="ques_ans">
+							<p class="question"><span>1.</span>What is fried chicken batter made of ?</p>
+							<p class="answer">In one medium bowl, mix together 3 cups of flour, garlic salt, 1 tablespoon black pepper, paprika and poultry seasoning. In a separate bowl, stir together 1 1/3 cups flour, salt, 1/4 teaspoon pepper, egg yolks and beer. You may need to thin with additional beer if the batter is too thick</p>
+						</div>
+					</div>
+					<div class="story-first-published">
+						<span> First Published </span>
+						<span>|</span>
+						<span> Thursday </span>
+						<span>|</span>
+						<span> 31 October, 2015 </span>
+						<span>,</span>
+						<span> 03:33 PM </span>
+					</div>
+					<div class="tags">
+						<ul>
+							<p>Tags:</p>
+							<li><a href="#">Indian</a></li>
+							<li><a href="#">Children</a></li>
+							<li><a href="#">Violence</a></li>
+							<li><a href="#">Poor</a></li>
+							<li><a href="#">Education</a></li>
+							<li><a href="#">development</a></li>
+							<li><a href="#">welfare</a></li>
+							<li><a href="#">Indian</a></li>
+							<li><a href="#">Children</a></li>
+							<li><a href="#">Violence</a></li>
+							<li><a href="#">Poor</a></li>
+							<li><a href="#">Education</a></li>
+							<li><a href="#">development</a></li>
+							<li><a href="#">welfare</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="frame_2a">
+				<p class="frame_title"><span>Most Popular</span></p>
+				<div class="thumbnail-overlay-text">
+					<div class="thumb-img">
+						<a href="#"><amp-img src="img/cat6.jpg" alt=" " height="215" width="382" layout="responsive"></amp-img></a>
+					</div>
+					<div class="thumb-body">
+						<p class="thumb-title"><a href="#">The Western classical dance form: Ballet equals beauty</a></p>
+					</div>
+				</div>
+				<div class="thumbnail-overlay-text">
+					<div class="thumb-img">
+						<a href="#"><amp-img src="img/cat1.jpg" alt=" " height="215" width="382" layout="responsive"></amp-img></a>
+					</div>
+					<div class="thumb-body">
+						<p class="thumb-title"><a href="#">The Western classical dance form: Ballet equals beauty</a></p>
+					</div>
+				</div>
+				<div class="thumbnail-overlay-text">
+					<div class="thumb-img">
+						<a href="#"><amp-img src="img/cat4.jpg" alt=" " height="215" width="382" layout="responsive"></amp-img></a>
+					</div>
+					<div class="thumb-body">
+						<p class="thumb-title"><a href="#">The Western classical dance form: Ballet equals beauty</a></p>
+					</div>
+				</div>
+				<div class="thumbnail-overlay-text">
+					<div class="thumb-img">
+						<a href="#"><amp-img src="img/cat5.jpg" alt=" " height="215" width="382" layout="responsive"></amp-img></a>
+					</div>
+					<div class="thumb-body">
+						<p class="thumb-title"><a href="#">The Western classical dance form: Ballet equals beauty</a></p>
+					</div>
+				</div>
+				<div class="thumbnail-overlay-text">
+					<div class="thumb-img">
+						<a href="#"><amp-img src="img/cat8.jpg" alt=" " height="215" width="382" layout="responsive"></amp-img></a>
+					</div>
+					<div class="thumb-body">
+						<p class="thumb-title"><a href="#">The Western classical dance form: Ballet equals beauty</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="amp-wp-content">
+				<nav aria-label="Breadcrumb" class="breadcrumb">
+					<ol class="m-breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Category</a></li>
+						<li><span>specs</span></li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+		<footer>
+			<div class="page-list">
+				<a href="#" title="Inligting"><amp-img class="mx-auto" src="img/inligting-logo.svg" alt="logo" height="15" width="130" layout="responsive"></amp-img></a>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Phone Finder</a></li>
+					<li><a href="#">How To</a></li>
+					<li><a href="#">Recipes</a></li>
+					<li><a href="#">Calender</a></li>
+					<li><a href="#">helpline Number</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="footer-stories">
+				<div class="story-cat">
+					<p><a href="#">Recipe:</a></p>
+					<ul>
+						<li><a href="#">Dum Aaloo</a></li>
+						<li><a href="#">Shahi Pulao</a></li>
+						<li><a href="#">Mango Custard</a></li>
+						<li><a href="#">Pinapple Cake</a></li>
+						<li><a href="#">Afghani Chicken</a></li>
+						<li><a href="#">Aaloo Tikki Wrap</a></li>
+					</ul>
+				</div>
+				<div class="story-cat">
+					<p><a href="#">How To:</a></p>
+					<ul>
+						<li><a href="#">Indo-China Border News</a></li>
+						<li><a href="#">indo-pak border news</a></li>
+						<li><a href="#">Delhi corona virus news</a></li>
+						<li><a href="#">bangalore corona virus news</a></li>
+						<li><a href="#">maharashtra corona virus news</a></li>
+						<li><a href="#">COVID-19 Tracker</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footnote">
+				<p>© copyright INLIGTING 2020. all rights reserved. Designed by Gaurav Garg</p>
+			</div>
+		</footer>
+	</body>
+</html>

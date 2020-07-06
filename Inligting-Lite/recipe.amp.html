@@ -1,0 +1,419 @@
+<!doctype html>
+<html amp lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script async src="https://cdn.ampproject.org/v0.js"></script>
+		<title>Fried Chicken</title>
+		<link rel="shortcut icon" type="image/svg" href="img/favicon.svg">
+		<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+		<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+		<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+		<link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+		<style amp-boilerplate>
+			body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+		</style>
+		<noscript>
+			<style amp-boilerplate>
+				body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+			</style>
+		</noscript>
+
+		<!---- Custom Style --->
+		<style amp-custom>
+			
+			/*********** misc ***********/
+			body{font-family: 'Montserrat', sans-serif;}
+			a {text-decoration: none; color: #333;}
+			div {height: auto; overflow: auto;}
+			.mx-auto {margin-left: auto; margin-right: auto;}
+			.bordered {border: 1px solid #ff9000;}
+			.pr2 {padding-right: 1rem;}
+			.pr4 {padding-right: 2rem;}
+			.pl2 {padding-left: 1rem;}
+			.justify-start {-ms-flex-pack: start; justify-content: flex-start;}
+			.items-center {-ms-flex-align: center; align-items: center;}
+			.flex {display: -ms-flexbox; display: flex;}
+			.wrapper {margin-top: 4rem; padding: 1rem;}
+			.generic-heading {font-size: 1rem; font-weight: 600; margin: 1rem 0;}
+
+			/************* Header **************/
+			.ampstart-headerbar {background-color: #fff; color: #000; padding: 8px 0; z-index: 999; box-shadow: 0 0 5px 2px rgba(0,0,0,.1); width: 100%; border-top: 3px solid #ff9000; position: fixed; top: 0; left: 0; right: 0;}
+			.ampstart-headerbar amp-img {position: fixed; top: 10px; left: 0; right: 0;}
+			.ampstart-navbar-trigger {line-height: 2.5rem; font-size: 2rem; margin-left: 1rem;}
+			.desktop-sidebar {background-color: #fff; width: 70%; border-right: 3px solid #ff9000;}
+			.desktop-sidebar .close {margin: 1rem; border: none; font-size: 1.5rem; background: transparent;}
+			.desktop-sidebar .close:focus {outline: none;}
+			.desktop-sidebar ul {list-style: none; padding: 1.5rem; margin: 0;}
+			.desktop-sidebar ul li {margin: 0 0 2rem 0;}
+			.desktop-sidebar ul li a {color:#555; font-size: 1rem; text-decoration: none; letter-spacing: 1px; text-transform: uppercase;}
+			.desktop-sidebar form {padding: 0;}
+			.desktop-sidebar form input {width: 92%; font-size:1rem; border-radius: 0; border-top: 0; border-left: 0; border-right: 0; border-bottom: 1px solid #ff9000;}
+			.desktop-sidebar form input:focus {outline: none;}
+
+			/******************** Breadcrumb ************/
+			.amp-wp-content {margin: 0 auto; max-width: inherit; overflow: hidden; width: 100%;}
+			.amp-wp-content .m-breadcrumb {list-style-type: none; margin: 0; padding: 0; margin-bottom: 2rem;}
+			.amp-wp-content .m-breadcrumb>li {display: inline; color: #7b7b7b; font-size: 15px; line-height: 22px;}
+			.amp-wp-content .m-breadcrumb>li>a {color: #ff9000; text-decoration: none;}
+			.amp-wp-content .m-breadcrumb>li+li:before {content: "/\00a0"; color: #7b7b7b; padding-left: 8px; padding-right: 4px;}
+
+			/****************** Footer *****************/
+			footer {background-color: #f1f1f1;}
+			footer .page-list {box-shadow: inset 1px 1px 6px #ccc; padding: 1rem 0.5rem;}
+			footer .page-list amp-img {margin: 0 0.5rem; padding: 1rem 29%; background-color: #fff; border-radius: 2rem; border-bottom: 2px solid #f2581a; border-left: 2px solid #f56718; border-top: 2px solid #ff9914; border-right: 2px solid #fec507;}
+			footer .page-list ul {list-style: none; padding: 0;}
+			footer .page-list li {margin: 10px; display: inline-flex;}
+			footer .page-list li a {text-transform: uppercase; font-size: 13px; color: rgba(255, 144, 0, 0.92); font-weight: 600;}
+			footer .footer-stories {padding: 1rem; background-color: #fff;}
+			footer .footer-stories .story-cat {width: 100%; height: auto; overflow: auto; margin-bottom: 1rem;}
+			footer .footer-stories .story-cat p {font-size: 14px; text-transform: uppercase; text-align: left; font-weight: 600; margin: 8px 0;}
+			footer .footer-stories .story-cat p a {color: #ff9000;}
+			footer .footer-stories .story-cat ul {list-style: none; padding: 0; margin: 0;}
+			footer .footer-stories .story-cat ul li {margin: 8px 5px; width: 44%; border-left: 2px solid #ff9000; padding-left: 5px; float: left; line-height: 1.2;}
+			footer .footer-stories .story-cat ul li a {font-size: 12px;}
+			footer .footnote {text-align: center; background-color: rgba(255, 144, 0, 0.92); padding: 5px; text-transform: capitalize;}
+			footer .footnote p {margin: 0; font-size: 12px; color: #fff;}
+
+			/****************** Thumbnail ***************/
+
+			.thumbnail {margin-bottom: 1rem; height: auto; overflow: auto;}
+			.thumbnail .thumb-body {padding: 0.5rem;}
+			.thumbnail .thumb-body .thumb-title  {margin: 0;}
+			.thumbnail .thumb-body .thumb-title a {text-decoration: none; color: #333; font-size: 1rem; font-weight: 600;}
+			.thumbnail .thumb-body .thumb-desc {font-size: 14px; margin: 0;}
+			
+			.thumbnail-overlay-text {position: relative; margin-bottom: 1rem; height: auto; overflow: auto;}
+			.thumbnail-overlay-text .thumb-body {position: absolute; bottom: 0; left: 0; right: 0; padding: 5px; background-color: rgba(255, 144, 0, 0.92);}
+			.thumbnail-overlay-text .thumb-body .thumb-title  {margin: 0; text-align: center;}
+			.thumbnail-overlay-text .thumb-body .thumb-title a {text-decoration: none; color: #fff; font-weight: 600; font-size: 14px;}
+
+			/************** Page Body ******************/
+			.recipe {padding-bottom: 0.5rem; line-height: 1.4;}
+			.recipe .recipe-header {height: auto; overflow: auto; margin-bottom: 5px;}
+			.recipe .recipe-header .recipe-title {font-size: 1.3rem;}
+			.recipe .recipe-header .recipe-exerpt {font-size: 14px; color: #888; font-weight: 400;}
+			.recipe .recipe-header .publish-details {display: flex; flex-wrap: wrap;}
+			.recipe .recipe-header .publish-details .editor-img {border-radius: 3.5rem; margin: 0.4rem 0.5rem 0 0; padding: 0.2rem; border-left: 4px solid rgba(255, 144, 0, 0.92); border-top: 3px solid rgba(255, 144, 0, 0.92);}
+			.recipe .recipe-header .publish-details .editor-img amp-img {width: 2.5rem; border-radius: 3.5rem; margin: 0; padding: 0.2rem;}
+			.recipe .recipe-header .publish-details .publish-dt-1 {margin-top: 0.5rem;}
+			.recipe .recipe-header .publish-details .editor-name {color: #333; font-size: 14px; font-weight: 600;}
+			.recipe .recipe-header .publish-details .publish-dt-1 .story-update-details {padding: 0; border: none; margin: 0 0 10px; list-style: none; display: block; font-family: "Montserrat", sans-serif;}
+			.recipe .recipe-header .publish-details .publish-dt-1 .story-update-details li {color: #888; font-size: 0.8rem; display: inline-block; padding: 0 1px;}
+			.recipe .recipe-header .social {display: flex; flex-wrap: wrap;}
+			.recipe .recipe-header .social a {padding: 0;}
+			.recipe .recipe-header .social a amp-img {width: 1.5rem; margin: 1rem 0.5rem;}
+			.recipe .recipe-header .recipe-image .image-caption {margin: 8px 0; font-size: 12px; color: #888; border-bottom: 1px solid rgba(255, 144, 0, 0.92); padding: 0 0 0.6rem 0; text-align: center;}
+			.recipe .recipe-body {font-size: 1rem; color: #444; border-bottom: 1px solid #ff9000;}
+			.recipe .recipe-body p {margin-top: 0;}
+			.recipe .recipe-body .recipe-summary {font-size: 1rem; line-height: 1.6; border-bottom: 1px solid rgba(255, 144, 0, 0.92); padding: 1rem 0; margin-bottom: 0;}
+			.recipe .recipe-body .recipe-summary span {text-transform: uppercase; margin-right: 1rem; font-size: 1rem; font-weight: 600; color: rgba(255, 144, 0, 0.92); letter-spacing: 2px;}
+			.recipe .recipe-body .recipe-details {border-bottom: 1px solid rgba(255, 144, 0, 0.92); padding: 1rem 0;}
+			.recipe .recipe-body .recipe-details p {font-size: 1rem; line-height: 1.6; padding: 0; margin: 0 1rem 0.5rem 0;}
+			.recipe .recipe-body .recipe-details p span {text-transform: uppercase; margin-right: 1rem; font-size: 1rem; font-weight: 600; color: rgba(255, 144, 0, 0.92); letter-spacing: 2px;}
+			.recipe .recipe-body .recipe-details ul {padding: 0; list-style: none; display: flex; flex-wrap: wrap; margin: 0; clear: both;}
+			.recipe .recipe-body .recipe-details ul li {margin: 5px 20px 5px 0; font-size: 14px; -webkit-transition: all 600ms; -moz-transition: all 600ms; transition: all 600ms;}
+			.recipe .recipe-body .recipe-details ul li span {font-weight: 600; margin-right: 10px; text-transform: capitalize; color: #777;}
+			.recipe .recipe-body .ingredients {padding: 1rem 0; border-bottom: 1px solid rgba(255, 144, 0, 0.92);}
+			.recipe .recipe-body .ingredients h2 {text-transform: uppercase; margin: 0 1rem 0.5rem 0; font-size: 1rem; font-weight: 600; color: rgba(255, 144, 0, 0.92); letter-spacing: 2px; float: left;}
+			.recipe .recipe-body .ingredients ul {padding: 0; list-style: none; display: flex; flex-wrap: wrap; margin: 0; clear: both;}
+			.recipe .recipe-body .ingredients ul li {padding: 5px 10px; margin: 5px 10px 5px 0; border: 1px solid #ff9914; font-size: 14px; -webkit-transition: all 600ms; -moz-transition: all 600ms; transition: all 600ms;}
+			.recipe .recipe-body .recipe-method h2 {letter-spacing: 2px; margin: 0 0 1rem 0; text-transform: uppercase; padding: 10px; font-size: 1rem; font-weight: 600; background-color: rgba(255, 144, 0, 0.92); color: #fff;}
+			.recipe .recipe-body .recipe-method .steps {margin-bottom: 1rem;}
+			.recipe .recipe-body .recipe-method .steps .steps-heading {font-size: 1rem; font-weight: 600; margin: 0;}
+			.recipe .recipe-body .recipe-method .steps .steps-heading span {margin-right: 1rem;}
+
+			.recipe .recipe-footer .frame_faq {margin-bottom: 0;}
+			.recipe .recipe-footer .frame_faq .frame-title {font-weight: 600; padding: 5px 10px; text-align: center; color: #fff; background-color: rgba(255, 144, 0, 0.92); font-size: 1rem; text-transform: capitalize;}
+			.recipe .recipe-footer .frame_faq .ques_ans {margin: 1rem 0; padding: 10px 15px; border: 1px solid rgba(255, 144, 0, 0.92);}
+			.recipe .recipe-footer .frame_faq .ques_ans .question {font-weight: 600; margin: 0 0 5px 0;}
+			.recipe .recipe-footer .frame_faq .ques_ans .question span {margin-right: 1rem;}
+			.recipe .recipe-footer .frame_faq .ques_ans .answer {margin: 0; color: #333;}
+			.recipe .recipe-footer .story-first-published {padding: 5px 0; margin: 0.5rem 0 1rem 0; border-bottom: 1px solid #ddd; border-top: 1px solid #ddd;}
+			.recipe .recipe-footer .story-first-published span {color: #a1a1a1; font-size: 12px; letter-spacing: 1px; font-weight: 500;}
+			.recipe .recipe-footer .tags {margin-bottom: 2rem;}
+			.recipe .recipe-footer .tags ul {list-style: none; padding: 0; display: flex; flex-wrap: wrap; margin: 0;}
+			.recipe .recipe-footer .tags ul p {margin: 5px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; color: rgba(255, 144, 0, 0.92);}
+			.recipe .recipe-footer .tags ul li {margin: 5px; border: 1px solid rgba(255, 144, 0, 0.92); padding: 0px 15px; font-size: 12px; line-height: 1.8; text-transform: capitalize;}
+
+			.table-light {font-size: 14px;}
+			.table-light, .table-light>td, .table-light>th {background-color: #fdfdfe;}
+			.table {width: 100%; margin-bottom: 1rem; color: #212529; border-collapse: collapse;}
+			.table td, .table th {padding: .75rem; vertical-align: top;}
+			.table-light .thead-light th {background-color: rgba(255, 144, 0, 0.92); color: #fff; border-color: #dee2e6;}
+			.table-striped tbody tr:nth-of-type(odd) {background-color: rgba(0,0,0,.05);}
+
+			.frame_2, .frame_2a {margin-bottom: 1rem;}
+			.frame_title {font-weight: 600; padding: 0; margin: 0.5rem 0.3rem 1.5rem 0.3rem; text-align: center; line-height: 0; border-bottom: 2px solid rgba(255, 144, 0, 0.92);}
+			.frame_title span {text-transform: uppercase; padding: 5px 10px 5px 10px; font-size: 1.1rem; background-color: #fff; color: #333;
+			letter-spacing: 1px;}
+		</style>
+	</head>
+	<body>
+		<header class="ampstart-headerbar flex justify-start items-center pr4 ">
+			<div class="ampstart-navbar-trigger" role="button" on="tap:sidebar-desktop.toggle" aria-label="Click to open sidebar" tabindex=" ">☰
+			</div>
+			<a href="#" title="Inligting"><amp-img class="mx-auto" src="img/inligting-logo.svg" alt="logo" height="45" width="130"></amp-img></a>
+		</header>
+		<amp-sidebar id="sidebar-desktop" class="desktop-sidebar" layout="nodisplay" side="left">
+			<button class="close" on="tap:sidebar-desktop.close">X</button>
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Videos</a></li>
+					<li><a href="#">Mobiles</a></li>
+					<form class="sample-form" method="post" action-xhr="/documentation/examples/api/submit-form-input-text-xhr" target="_top" custom-validation-reporting="show-all-on-submit">
+						<input type="text" id="show-all-on-submit-search" name="Search" placeholder="Search...">
+					</form>
+				</ul>
+			</nav>
+		</amp-sidebar>
+		<div class="wrapper">
+			<div class="recipe">
+				<div class="recipe-header">
+					<h1 class="recipe-title">Crispy Chicken Recipe</h1>
+					<h2 class="recipe-exerpt">In an interesting development, Adam Gilchrist has touted MS Dhoni as the world’s best wicketkeeper. The legendary Australian wicketkeeper felt former India captain epitomized all the traits which a leading wicketkeeper needed to have.</h2>
+					<div class="publish-details">
+						<a  class="editor-img" href="#"><amp-img src="img/gaurav.jpg" layout="responsive" width="55" height="55"></amp-img></a>
+						<div class="publish-dt-1">
+							<a href="#" class="editor-name">Gaurav Garg</a>
+							<ul class="story-update-details">
+								<li>Updated</li>
+								<li>: </li>
+								<li>29 November 2017, </li>
+								<li> 3:29 PM</li>
+							</ul>
+						</div>
+					</div>
+					<div class="social justify-content-center">
+						<a class="nav-item nav-link" href="#"><amp-img src="img/facebook.svg" layout="responsive" width="30" height="30"></amp-img></a>
+						<a class="nav-item nav-link" href="#"><amp-img src="img/linkedin.svg" layout="responsive" width="30" height="30"></amp-img></a>
+						<a class="nav-item nav-link" href="#"><amp-img src="img/join.svg" layout="responsive" width="30" height="30"></amp-img></a>
+						<a class="nav-item nav-link" href="#"><amp-img src="img/twitter.svg" layout="responsive" width="30" height="30"></amp-img></a>
+						<a class="nav-item nav-link" href="#"><amp-img src="img/whatsapp.svg" layout="responsive" width="30" height="30"></amp-img></a>
+					</div>
+					<div class="recipe-image">
+						<amp-img src="img/fried-chicken.png" layout="responsive" width="392" height="220"></amp-img>
+						<p class="image-caption">Homemade American fried Chicken with easily available ingredients.</p>
+					</div>
+				</div>
+				<div class="recipe-body">
+					<p class="recipe-summary"><span>SUMMARY:</span>A bucket full of crispy chicken with your favourite movie with friends is something we have all found comfort in at some points in our lives. But there are also times when you don’t get to call your friends over or buy a bucket full of your favourite fried chicken. That is when this recipe will come to your rescue. Fried chicken is one of those dishes that you cannot get sick of no matter how many times you have had it. A good and easy recipe for fried chicken always comes in handy. A party coming up? Cook fried chicken! Craving for restaurant-style food? Cook some fried chicken. Cannot think of anything to make for dinner but still want to have something delicious? Fry some chicken and you will not regret it! Try this easy recipe out for some delicious crispy chicken and there will be no looking back for you!</p>
+					<div class="recipe-details">
+						<p><span>Recipe Details:</span></p>
+						<ul>
+							<li><span>Chef:</span>Gaurav Garg</li>
+							<li><span>Cuisine:</span>North Indian</li>
+							<li><span>Prep Time:</span>20 min</li>
+							<li><span>Cook Time:</span>30 min</li>
+							<li><span>Total Time:</span>50 min</li>
+							<li><span>calories:</span>450 cal/serving</li>
+							<li><span>servings:</span>4</li>
+						</ul>
+					</div>
+					<div class="ingredients">
+						<h2>ingredients of crispy chicken:</h2>
+						<ul>
+							<li>1 kilograms chicken</li>
+							<li>2 teaspoon garlic salt</li>
+							<li>black pepper as required</li>
+							<li>2 cup refined oil</li>
+							<li>1/2 cup water</li>
+							<li>3 cup all purpose flour</li>
+							<li>2 teaspoon paprika</li>
+							<li>2 eggs- brown</li>
+							<li>salt as required</li>
+						</ul>
+					</div>
+					<div class="recipe-method">
+						<h2>How to make crispy chicken</h2>
+						<div class="steps">
+							<p class="steps-heading"><span>Step 1:</span>Coat the chicken with egg and flour</p>
+							<p>The coating needs to be done with separate ingredients, dedicate one hand to dry coating and one to wet for a lesser mess. To begin, add flour to a deep-bottomed large dish and season it with garlic salt, paprika and black pepper and some regular salt. In a different dish, beat the eggs and add the water to it. Take the washed and dried chicken pieces and dip each piece in the egg mix once and then coat with flour. Repeat this process with each piece and keep them aside.</p>
+							<amp-img src="img/egg-coating.jpg" alt=" " layout="responsive" width="392" height="220"></amp-img>
+						</div>
+						<div class="steps">
+							<p class="steps-heading"><span>Step 2:</span>Fry and Serve!</p>
+							<p>Heat oil in a pan and insert a wooden spoon to check if you do not have a thermometer. If you see lazy bubbles, start adding the chicken and do not move it as soon as you put it into the oil. Let it sit for about 2 minutes. This helps the crumbs stay in place, resulting in a flaky coating. Now move the chicken, take out when a rich golden colour is achieved and serve with your favourite sauce!</p>
+							<amp-img src="img/frying-chicken.jpg" alt=" " layout="responsive" width="392" height="220"></amp-img>
+						</div>
+					</div>
+				</div>
+				<div class="recipe-footer">
+					<div class="frame_faq">
+						<h2 class="frame-title">Frequently Asked Questions</h2>
+						<div class="ques_ans">
+							<p class="question"><span>1.</span>What is fried chicken batter made of ?</p>
+							<p class="answer">In one medium bowl, mix together 3 cups of flour, garlic salt, 1 tablespoon black pepper, paprika and poultry seasoning. In a separate bowl, stir together 1 1/3 cups flour, salt, 1/4 teaspoon pepper, egg yolks and beer. You may need to thin with additional beer if the batter is too thick</p>
+						</div>
+						<div class="ques_ans">
+							<p class="question"><span>1.</span>What is fried chicken batter made of ?</p>
+							<p class="answer">In one medium bowl, mix together 3 cups of flour, garlic salt, 1 tablespoon black pepper, paprika and poultry seasoning. In a separate bowl, stir together 1 1/3 cups flour, salt, 1/4 teaspoon pepper, egg yolks and beer. You may need to thin with additional beer if the batter is too thick</p>
+						</div>
+					</div>
+					<div class="story-first-published">
+						<span> First Published </span>
+						<span>|</span>
+						<span> Thursday </span>
+						<span>|</span>
+						<span> 31 October, 2015 </span>
+						<span>,</span>
+						<span> 03:33 PM </span>
+					</div>
+					<div class="tags">
+						<ul>
+							<p>Tags:</p>
+							<li><a href="#">Indian</a></li>
+							<li><a href="#">Children</a></li>
+							<li><a href="#">Violence</a></li>
+							<li><a href="#">Poor</a></li>
+							<li><a href="#">Education</a></li>
+							<li><a href="#">development</a></li>
+							<li><a href="#">welfare</a></li>
+							<li><a href="#">Indian</a></li>
+							<li><a href="#">Children</a></li>
+							<li><a href="#">Violence</a></li>
+							<li><a href="#">Poor</a></li>
+							<li><a href="#">Education</a></li>
+							<li><a href="#">development</a></li>
+							<li><a href="#">welfare</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>		
+			
+			<div class="frame_2a">
+				<p class="frame_title"><span>Related</span></p>
+				<div class="thumbnail">
+					<div class="thumb-img">
+						<a href="#"><amp-img src="img/coq-au-vin-with-gratin-topping.jpg" alt=" " height="215" width="382" layout="responsive"></amp-img></a>
+					</div>
+					<div class="thumb-body">
+						<p class="thumb-title"><a href="#">Coq au vin with gratin topping</a></p>
+					</div>
+				</div>
+				<div class="thumbnail">
+					<div class="thumb-img">
+						<a href="#"><amp-img src="img/gnocchi-with-pumpkin-and-whipped-ricotta.jpg" alt=" " height="215" width="382" layout="responsive"></amp-img></a>
+					</div>
+					<div class="thumb-body">
+						<p class="thumb-title"><a href="#">Gnocchi with pumpkin and whipped ricotta</a></p>
+					</div>
+				</div>
+				<div class="thumbnail">
+					<div class="thumb-img">
+						<a href="#"><amp-img src="img/moroccan-chicken-meatball-tagine.jpg" alt=" " height="215" width="382" layout="responsive"></amp-img></a>
+					</div>
+					<div class="thumb-body">
+						<p class="thumb-title"><a href="#">Moroccan chicken meatball tagine</a></p>
+					</div>
+				</div>
+				<div class="thumbnail">
+					<div class="thumb-img">
+						<a href="#"><amp-img src="img/japanese-style-shredded-chicken-salad.jpg" alt=" " height="215" width="382" layout="responsive"></amp-img></a>
+					</div>
+					<div class="thumb-body">
+						<p class="thumb-title"><a href="#">Japanese-style shredded chicken salad</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="frame_2a">
+				<p class="frame_title"><span>Most Popular</span></p>
+				<div class="thumbnail-overlay-text">
+					<div class="thumb-img">
+						<a href="#"><amp-img src="img/paprika-chicken-with-quinoa-tabbouleh.jpeg" alt=" " height="215" width="382" layout="responsive"></amp-img></a>
+					</div>
+					<div class="thumb-body">
+						<p class="thumb-title"><a href="#">Paprika chicken with quinoa tabbouleh</a></p>
+					</div>
+				</div>
+				<div class="thumbnail-overlay-text">
+					<div class="thumb-img">
+						<a href="#"><amp-img src="img/cumin-chicken-and-pumpkin-with-warm-chickpea-salsa.jpeg" alt=" " height="215" width="382" layout="responsive"></amp-img></a>
+					</div>
+					<div class="thumb-body">
+						<p class="thumb-title"><a href="#">Cumin chicken and pumpkin with warm chickpea salsa</a></p>
+					</div>
+				</div>
+				<div class="thumbnail-overlay-text">
+					<div class="thumb-img">
+						<a href="#"><amp-img src="img/braised-chicken-with-spinach-and-lentils.jpeg" alt=" " height="215" width="382" layout="responsive"></amp-img></a>
+					</div>
+					<div class="thumb-body">
+						<p class="thumb-title"><a href="#">Braised chicken with spinach and lentils</a></p>
+					</div>
+				</div>
+				<div class="thumbnail-overlay-text">
+					<div class="thumb-img">
+						<a href="#"><amp-img src="img/peruvian-grilled-chicken-with-saffron-rice.jpg" alt=" " height="215" width="382" layout="responsive"></amp-img></a>
+					</div>
+					<div class="thumb-body">
+						<p class="thumb-title"><a href="#">Peruvian inspired grilled chicken with saffron rice</a></p>
+					</div>
+				</div>
+				<div class="thumbnail-overlay-text">
+					<div class="thumb-img">
+						<a href="#"><amp-img src="img/cajun-chicken-rice-bowl.jpg" alt=" " height="215" width="382" layout="responsive"></amp-img></a>
+					</div>
+					<div class="thumb-body">
+						<p class="thumb-title"><a href="#">Cajun chicken rice bowl</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="amp-wp-content">
+				<nav aria-label="Breadcrumb" class="breadcrumb">
+					<ol class="m-breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Category</a></li>
+						<li><span>Fried Chicken</span></li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+		<footer>
+			<div class="page-list">
+				<a href="#" title="Inligting"><amp-img class="mx-auto" src="img/inligting-logo.svg" alt="logo" height="15" width="130" layout="responsive"></amp-img></a>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Phone Finder</a></li>
+					<li><a href="#">How To</a></li>
+					<li><a href="#">Recipes</a></li>
+					<li><a href="#">Calender</a></li>
+					<li><a href="#">helpline Number</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="footer-stories">
+				<div class="story-cat">
+					<p><a href="#">Recipe:</a></p>
+					<ul>
+						<li><a href="#">Dum Aaloo</a></li>
+						<li><a href="#">Shahi Pulao</a></li>
+						<li><a href="#">Mango Custard</a></li>
+						<li><a href="#">Pinapple Cake</a></li>
+						<li><a href="#">Afghani Chicken</a></li>
+						<li><a href="#">Aaloo Tikki Wrap</a></li>
+					</ul>
+				</div>
+				<div class="story-cat">
+					<p><a href="#">How To:</a></p>
+					<ul>
+						<li><a href="#">Indo-China Border News</a></li>
+						<li><a href="#">indo-pak border news</a></li>
+						<li><a href="#">Delhi corona virus news</a></li>
+						<li><a href="#">bangalore corona virus news</a></li>
+						<li><a href="#">maharashtra corona virus news</a></li>
+						<li><a href="#">COVID-19 Tracker</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footnote">
+				<p>© copyright INLIGTING 2020. all rights reserved. Designed by Gaurav Garg</p>
+			</div>
+		</footer>
+	</body>
+</html>
